@@ -35,7 +35,7 @@ The datasets used for these SQL queries are provided in the [datasets](./dataset
 - `dataset1.csv`: Employee dataset
 - `dataset2.csv`: Sales dataset
 
-### Programmer
+### PROGRAMMER
 
 | PNAME     |	  DOB	    |	   DOJ   	| SEX	|   PROF1   |	   PROF2   |	 SALARY   |
 |-----------|-----------|-----------|-----|-----------|------------|------------|
@@ -53,6 +53,23 @@ The datasets used for these SQL queries are provided in the [datasets](./dataset
 | REVATHI   |	 12/02/69 |	 01/02/92 |	 F	|  PASCAL   |	   BASIC   |	  3700    |
 | VIJAYA    |	 12/14/65 |	 05/02/92 |	 F	|  FOXPRO   |	   C       |	  3500    |
 
+### STUDIES
+
+|  PNAME    |   SPLACE	 |    COURSE   |	 CCOST  |
+|-----------|------------|-------------|----------|
+| ANAND     |	SABHARI	   |  PGDCA	     |  4500    |
+| ALIAF	    | COIT	     |  DCA	       |  7200    |
+| JULIANA	  | BITS	     |  MCA      	 |  22000   |
+| KAMALA    |	PRAGATHI	 |  DCP	       |  5000    |
+| MARY	    | SABHARI    |	PGDCA      |  4500    |
+| NELSON	  | PRAGATHI	 |  DAP	       |  6200    |
+| PARTICK	  | PRAGATHI	 |  DCAP	     |  5200    |
+| QADIR	    | APPLE	     |  HDCP	     |  14000   |
+| RAMESH	  | SABHARI	   |  PGDCA	     |  4500    |
+| REBECCA   |	BRILLIANT	 |  DCA&P	     |  11000   |
+| REMITHA   | BDPS	     |  DCS	       |  6000    |
+| REVATHI	  | SABHARI    |	DCP	       |  5000    |
+| VIJAYA	  | BDPS	     |  DCA	       |  48000   |
 
 
 ## How to Use
