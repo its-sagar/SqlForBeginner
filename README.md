@@ -35,6 +35,26 @@ The datasets used for these SQL queries are provided in the [datasets](./dataset
 - `dataset1.csv`: Employee dataset
 - `dataset2.csv`: Sales dataset
 
+### Programmer
+
+| PNAME     |	  DOB	    |	   DOJ   	| SEX	|   PROF1   |	   PROF2   |	 SALARY   |
+|-----------|-----------|-----------|-----|-----------|------------|------------|
+| ANAND   	|  04/21/66 |	 04/21/92	|  M	|  PASCAL	  |    BASIC	 |    3200    |
+| ALIAF   	|  07/02/64 |	 11/13/90	|  M	|  CLIPPER	|    COBOL	 |    2800    |
+| JULIANA	  |  07/02/64 |	 04/21/90	|  F	|  COBOL	  |    DBASE	 |    3000    |
+| KAMALA	  |  10/30/68 |	 01/02/92	|  F	|  C	      |    DBASE	 |    2900    |
+| MARY	    |  06/24/70 |	 02/01/91	|  F	|  C++	    |    ORACLE	 |    4500    |
+| NELSON    |	 09/11/65	|  10/11/89 |	 M  |	 COBOL    |	   DBASE   |	  2500    |
+| PARTICK   |	 11/10/65 |	 04/21/90 |	 M  |	 PASCAL   |	   CLIPPER |	  2800    |
+| QADIR     |	 08/31/65 |	 04/21/91 |	 M	|  ASSEMBLY |	   C	     |    3000    |
+| RAMESH	  |  05/03/67 |	 02/28/91	|  M  |	 PASCAL   |    DBASE   |	  3200    |
+| REBECCA   |	 01/01/67 |	 12/01/90 |	 F  |  BASIC    |	   COBOL   |	  2500    |
+| REMITHA   |	 12/02/69 |	 01/02/92 |	 F	|  PASCAL   |	   BASIC	 |    3600    |
+| REVATHI   |	 12/02/69 |	 01/02/92 |	 F	|  PASCAL   |	   BASIC   |	  3700    |
+| VIJAYA    |	 12/14/65 |	 05/02/92 |	 F	|  FOXPRO   |	   C       |	  3500    |
+
+
+
 ## How to Use
 
 1. Clone the repository:
