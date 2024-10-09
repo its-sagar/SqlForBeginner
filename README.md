@@ -71,6 +71,26 @@ The datasets used for these SQL queries are provided in the [datasets](./dataset
 | REVATHI	  | SABHARI    |	DCP	       |  5000    |
 | VIJAYA	  | BDPS	     |  DCA	       |  48000   |
 
+### SOFTWARE
+
+| PNAME	   | TITLE	            | 	DEV_IN	 | DCOST	  |  SCOST	 | 	SOLD  |
+|----------|--------------------|------------|----------|----------|--------|
+| ANAND	   | PHRACHUTES	        | 	BASIC    |	6000	  |  400		 |  43    |
+| ANAND	   | VIDEO TITLING PACK	| 	PASCAL	 |  16000	  |  7500	   | 	9     |
+| JULIANA	 | INVENTORY CONTROL	|   COBOL		 |  3500		|  3000		 |  0     |
+| KAMALA	 | PAYROLL	PACKAGE	  | 	DBASE	   |  20000		|  9000		 |  7     |
+| MARY	 	 | FINANCIAL ACCOUNT  | 	ORACLE	 | 	85000	  |  18000	 | 	4     |
+| MARY		 | CODE GENERATOR		  |   C	       | 	20000		|  4500		 |  23    |
+| PARTICK	 | READ ME		        |   C++		   |  1200		|  300		 |  84    |
+| QADIR		 | BOMBS AWAY	        | 	ASSEMBLY |  5000		|  750		 |  11    | 
+| QADIR		 | VACCINES		        |   C		     |  3400		|  1900		 |  21    |
+| RAMESH	 | HOTEL MANAGEMENT	  | 	DBASE    |	35000 	|  12000	 | 	4     |
+| RAMESH	 | DEAD LEE		        |   PASCAL	 | 	4500		|  600		 |  73    |
+| REMITHA	 | PC UTILITIES		    |   C	       | 	5000		|  725		 |  51    |
+| REMITHA	 | TRS HELP PACKAGE		| 	ASSEMBLY |  6000		|  2500		 |  6     |
+| REVATHI	 | HOSPITAL MANAGEMENT| 	PASCAL	 |  75000	  |  1100.00 |  2     |
+| REVATHI	 | QUIZ MASTER		    |  BASIC		 |  2100		|  3200.00 |  15    |
+
 
 ## How to Use
 
