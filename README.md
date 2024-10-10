@@ -3,9 +3,9 @@
 This repository contains solutions to various SQL questions, covering topics from **beginner** to **advanced** levels. Each solution is provided as a `.sql` file. You can find questions on topics like data selection, aggregation, joins, subqueries, and more.
 
 ## SQL QUESTIONS
-1.  [IMDB Rating](#imdb-rating)
+1.  [Find out the selling cost average for packages developed in PASCAL](#find-out-the-selling-cost-average-for-packages-developed-in-pascal)
 
-## QUERY SECTION
+## Section
 - [Beginner](#beginner)
 - [Intermediate](#intermediate)
 - [Advanced](#advanced)
@@ -13,7 +13,15 @@ This repository contains solutions to various SQL questions, covering topics fro
 ## Beginner
 Basic SQL questions covering topics like simple `SELECT` queries, `WHERE` clauses, `ORDER BY`, and basic aggregate functions.
 
-- [Question 1](./sql_solutions/beginner/question1.sql): Write a query to select all records from the `employees` table.
+### Find out the selling cost average for packages developed in PASCAL 
+
+- [Question 1](./sql_solutions/beginner/question1.sql): Find out the selling cost average for packages developed in PASCAL.
+```sql
+select dev_in, avg(scost) from software
+where dev_in = "pascal"
+group by dev_in;
+```
+  
 - [Question 2](./sql_solutions/beginner/question2.sql): Write a query to find employees whose salary is above 5000.
   
 ## Intermediate
