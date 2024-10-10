@@ -4,6 +4,12 @@ This repository contains solutions to various SQL questions, covering topics fro
 
 ## SQL QUESTIONS
 1.  [Find out the selling cost average for packages developed in PASCAL](#find-out-the-selling-cost-average-for-packages-developed-in-pascal)
+2.  [Display the Names and Ages of all the Programmers](#display-the-names-and-ages-of-all-the-programmers)
+3.  [Display the Names of those who have done the DAP Course](#display-the-names-of-those-who-have-done-the-dap-course)
+4.  [What is the HIGHEST number of copies sold by a package](#what-is-the-highest-number-of-copies-sold-by-a-package)
+5.  [Display the NAMES AND DATE OF BIRTH of all programmers born in JANUARY](#display-the-names-and-date-of-birth-of-all-programmers-born-in-january)
+6.  [Display the LOWEST course fee](#display-the-lowest-course-fee)
+
 
 ## Section
 - [Beginner](#beginner)
@@ -21,8 +27,67 @@ select dev_in, avg(scost) from software
 where dev_in = "pascal"
 group by dev_in;
 ```
+### Display the Names and Ages of all the Programmers
+
+- [Question 2](./sql_solutions/beginner/question2.sql): Display the Names and Ages of all the Programmers.
   
-- [Question 2](./sql_solutions/beginner/question2.sql): Write a query to find employees whose salary is above 5000.
+```sql
+select pnmae, date_format(from_days(datediff(now(), dob)), '%d-%m-%y') as age from programmer;
+```
+### Display the Names of those who have done the DAP Course
+
+- [Question 2](./sql_solutions/beginner/question2.sql): Display the Names of those who have done the DAP Course
+  
+```sql
+select pname from studies
+where course = 'DAP';
+```
+### What is the HIGHEST number of copies sold by a package
+
+- [Question 2](./sql_solutions/beginner/question2.sql): What is the HIGHEST number of copies sold by a package
+
+```sql
+select * from software
+order by sold DESC
+limit 1;
+```
+### Display the NAMES AND DATE OF BIRTH of all programmers born in JANUARY
+
+- [Question 2](./sql_solutions/beginner/question2.sql): Display the NAMES AND DATE OF BIRTH of all programmers born in JANUARY.
+
+```sql
+
+select pnmae, dob from  programmer
+where dob like '_____01___';
+```
+
+### Display the LOWEST course fee
+
+- [Question 2](./sql_solutions/beginner/question2.sql): Display the LOWEST course fee.
+```sql
+select ccost as fee from studies
+order by ccost
+limit 1;
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   
 ## Intermediate
 Intermediate-level SQL questions including `JOINs`, `GROUP BY`, `HAVING`, and more complex aggregates.
