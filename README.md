@@ -1,3 +1,37 @@
+<!-- Add this ID at the top of your README -->
+<a name="readme-top"></a>
+
+# Your Project Title
+Your content goes here...
+
+<!-- Sticky Back to Top Button -->
+<div id="top" style="position: fixed; bottom: 20px; right: 20px;">
+    <a href="#readme-top">
+        <img width="35" src="https://github.com/FortAwesome/Font-Awesome/blob/6.x/svgs/solid/circle-up.svg" alt="Back to Top" title="Back to Top">
+    </a>
+</div>
+
+<!-- Rest of your README content -->
+
+<!-- Add this ID at the top of your README -->
+<a name="readme-top"></a>
+
+# Your Project Title
+Your content goes here...
+
+<!-- Alternative Sticky Back to Top Button -->
+<div id="top" style="position: fixed; bottom: 20px; right: 20px;">
+    <a href="#readme-top">
+        <img width="40" src="https://github.com/FortAwesome/Font-Awesome/blob/6.x/svgs/solid/arrow-circle-up.svg" alt="Back to Top" title="Back to Top">
+    </a>
+</div>
+
+<div align="right">
+    <a href="#readme-top">
+        <img src="https://img.shields.io/badge/Back_to_top-⬆️-blue" alt="Back to top" />
+    </a>
+</div>
+
 # SQL Solutions Repository
 
 This repository contains solutions to various SQL questions, covering topics from **beginner** to **advanced** levels. Each solution is provided as a `.sql` file. You can find questions on topics like data selection, aggregation, joins, subqueries, and more.
@@ -19,7 +53,14 @@ This repository contains solutions to various SQL questions, covering topics fro
 ## Beginner
 Basic SQL questions covering topics like simple `SELECT` queries, `WHERE` clauses, `ORDER BY`, and basic aggregate functions.
 
+
+
 ### Find out the selling cost average for packages developed in PASCAL 
+<div align="right">
+    <a href="#readme-top">
+        <img src="https://img.shields.io/badge/Back_to_top-⬆️-blue" alt="Back to top" />
+    </a>
+</div>
 
 - [Question 1](./sql_solutions/Beginner/question1.sql): Find out the selling cost average for packages developed in PASCAL.
 ```sql
@@ -192,3 +233,31 @@ Feel free to contribute your own SQL solutions or improve the existing ones. Her
 ## License
 
 This repository is licensed under the MIT License. See the [LICENSE](./LICENSE) file for more details.
+
+
+<!-- Back to top button -->
+<div align="right">
+    <a href="#readme-top"><img src="https://img.shields.io/badge/Back%20to%20Top-%E2%86%A9-blue" alt="Back to Top"/></a>
+</div>
+
+<!-- Add this ID at the top of your README -->
+<a name="readme-top"></a>
+
+# Your Project Title
+Rest of your README content goes here...
+
+
+<!-- Add this ID at the top of your README -->
+<a name="readme-top"></a>
+
+# Your Project Title
+Your content goes here...
+
+<!-- Sticky Back to Top Button -->
+<div id="top" style="position: fixed; bottom: 20px; right: 20px;">
+    <a href="#readme-top">
+        <img width="35" src="https://github.com/FortAwesome/Font-Awesome/blob/6.x/svgs/solid/circle-up.svg" alt="Back to Top" title="Back to Top">
+    </a>
+</div>
+
+<!-- Rest of your README content -->
