@@ -937,13 +937,13 @@ The datasets used for these SQL queries are provided in the [datasets](./dataset
 1. Clone the repository:
 
     ```bash
-    git clone https://github.com/your-username/SQL-Solutions.git
+    git clone https://github.com/its-sagar/SqlForBeginner.git
     ```
 
 2. Navigate to the directory:
 
     ```bash
-    cd SQL-Solutions/sql_solutions
+    cd SqlForBeginner/sql_solutions
     ```
 
 3. Load the datasets in your SQL database and run the `.sql` files as queries.
