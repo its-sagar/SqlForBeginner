@@ -41,17 +41,18 @@ Basic SQL questions covering topics like simple `SELECT` queries, `WHERE` clause
 ### Find out the selling cost average for packages developed in PASCAL 
 
 - [Question 1](./sql_solutions/Beginner/question1.sql): Find out the selling cost average for packages developed in PASCAL.
-```sql
-select dev_in, avg(scost) from software
-where dev_in = "pascal"
-group by dev_in;
-```
 
 <div align="right">
     <a href="#readme-top">
         <img width="20" src="./circle-up.svg" alt="" />
     </a>
 </div>
+
+```sql
+select dev_in, avg(scost) from software
+where dev_in = "pascal"
+group by dev_in;
+```
 
 ### Display the Names and Ages of all the Programmers
 
