@@ -1,40 +1,11 @@
 <!-- Add this ID at the top of your README -->
 <a name="readme-top"></a>
 
-# Your Project Title
-Your content goes here...
+# SQL Solutions Repository 
 
-<!-- Sticky Back to Top Button -->
-<div id="top" style="position: fixed; bottom: 20px; right: 20px;">
-    <a href="#readme-top">
-        <img width="35" src="https://github.com/FortAwesome/Font-Awesome/blob/6.x/svgs/solid/circle-up.svg" alt="Back to Top" title="Back to Top">
-    </a>
-</div>
+This repository contains solutions to various SQL questions, covering topics from **beginner** to **advanced** levels. Each solution is provided as a `.sql` file. You can find questions on topics like data selection, aggregation, joins, subqueries, and more. 
 
-<!-- Rest of your README content -->
 
-<!-- Add this ID at the top of your README -->
-<a name="readme-top"></a>
-
-# Your Project Title
-Your content goes here...
-
-<!-- Alternative Sticky Back to Top Button -->
-<div id="top" style="position: fixed; bottom: 20px; right: 20px;">
-    <a href="#readme-top">
-        <img width="40" src="https://github.com/FortAwesome/Font-Awesome/blob/6.x/svgs/solid/arrow-circle-up.svg" alt="Back to Top" title="Back to Top">
-    </a>
-</div>
-
-<div align="right">
-    <a href="#readme-top">
-        <img src="https://img.shields.io/badge/Back_to_top-⬆️-blue" alt="Back to top" />
-    </a>
-</div>
-
-# SQL Solutions Repository
-
-This repository contains solutions to various SQL questions, covering topics from **beginner** to **advanced** levels. Each solution is provided as a `.sql` file. You can find questions on topics like data selection, aggregation, joins, subqueries, and more.
 
 ## SQL QUESTIONS
 1.  [Find out the selling cost average for packages developed in PASCAL](#find-out-the-selling-cost-average-for-packages-developed-in-pascal)
@@ -45,22 +16,29 @@ This repository contains solutions to various SQL questions, covering topics fro
 6.  [Display the LOWEST course fee](#display-the-lowest-course-fee)
 
 
+<div align="right">
+    <a href="#readme-top">
+        <img width="20" src="./circle-up.svg" alt="" />
+    </a>
+</div>
+
 ## Section
 - [Beginner](#beginner)
 - [Intermediate](#intermediate)
 - [Advanced](#advanced)
 
+<div align="right">
+    <a href="#readme-top">
+        <img width="20" src="./circle-up.svg" alt="" />
+    </a>
+</div>
+
+
 ## Beginner
 Basic SQL questions covering topics like simple `SELECT` queries, `WHERE` clauses, `ORDER BY`, and basic aggregate functions.
 
 
-
 ### Find out the selling cost average for packages developed in PASCAL 
-<div align="right">
-    <a href="#readme-top">
-        <img src="https://img.shields.io/badge/Back_to_top-⬆️-blue" alt="Back to top" />
-    </a>
-</div>
 
 - [Question 1](./sql_solutions/Beginner/question1.sql): Find out the selling cost average for packages developed in PASCAL.
 ```sql
@@ -68,9 +46,21 @@ select dev_in, avg(scost) from software
 where dev_in = "pascal"
 group by dev_in;
 ```
+
+<div align="right">
+    <a href="#readme-top">
+        <img width="20" src="./circle-up.svg" alt="" />
+    </a>
+</div>
+
 ### Display the Names and Ages of all the Programmers
 
 - [Question 2](./sql_solutions/Beginner/question2.sql): Display the Names and Ages of all the Programmers.
+<div align="right">
+    <a href="#readme-top">
+        <img width="20" src="./circle-up.svg" alt="" />
+    </a>
+</div>
   
 ```sql
 select pnmae, date_format(from_days(datediff(now(), dob)), '%d-%m-%y') as age from programmer;
@@ -78,6 +68,11 @@ select pnmae, date_format(from_days(datediff(now(), dob)), '%d-%m-%y') as age fr
 ### Display the Names of those who have done the DAP Course
 
 - [Question 3](./sql_solutions/Beginner/question3.sql): Display the Names of those who have done the DAP Course
+<div align="right">
+    <a href="#readme-top">
+        <img width="20" src="./circle-up.svg" alt="" />
+    </a>
+</div>
   
 ```sql
 select pname from studies
@@ -86,6 +81,12 @@ where course = 'DAP';
 ### What is the HIGHEST number of copies sold by a package
 
 - [Question 4](./sql_solutions/Beginner/question4.sql): What is the HIGHEST number of copies sold by a package
+
+<div align="right">
+    <a href="#readme-top">
+        <img width="20" src="./circle-up.svg" alt="" />
+    </a>
+</div>
 
 ```sql
 select * from software
@@ -96,6 +97,12 @@ limit 1;
 
 - [Question 5](./sql_solutions/Beginner/question5.sql): Display the NAMES AND DATE OF BIRTH of all programmers born in JANUARY.
 
+<div align="right">
+    <a href="#readme-top">
+        <img width="20" src="./circle-up.svg" alt="" />
+    </a>
+</div>
+
 ```sql
 
 select pnmae, dob from  programmer
@@ -105,6 +112,13 @@ where dob like '_____01___';
 ### Display the LOWEST course fee
 
 - [Question 6](./sql_solutions/Beginner/question6.sql): Display the LOWEST course fee.
+
+<div align="right">
+    <a href="#readme-top">
+        <img width="20" src="./circle-up.svg" alt="" />
+    </a>
+</div>
+
 ```sql
 select ccost as fee from studies
 order by ccost
@@ -205,6 +219,11 @@ The datasets used for these SQL queries are provided in the [datasets](./dataset
 | REVATHI	 | HOSPITAL MANAGEMENT| 	PASCAL	 |  75000	  |  1100.00 |  2     |
 | REVATHI	 | QUIZ MASTER		    |  BASIC		 |  2100		|  3200.00 |  15    |
 
+<div align="right">
+    <a href="#readme-top">
+        <img width="20" src="./circle-up.svg" alt="" />
+    </a>
+</div>
 
 ## How to Use
 
@@ -222,6 +241,12 @@ The datasets used for these SQL queries are provided in the [datasets](./dataset
 
 3. Load the datasets in your SQL database and run the `.sql` files as queries.
 
+<div align="right">
+    <a href="#readme-top">
+        <img width="20" src="./circle-up.svg" alt="" />
+    </a>
+</div>
+
 ## Contributing
 
 Feel free to contribute your own SQL solutions or improve the existing ones. Here's how:
@@ -230,34 +255,18 @@ Feel free to contribute your own SQL solutions or improve the existing ones. Her
 2. Create a new branch for your feature or fix.
 3. Submit a pull request with a description of the changes.
 
+<div align="right">
+    <a href="#readme-top">
+        <img width="20" src="./circle-up.svg" alt="" />
+    </a>
+</div>
+
 ## License
 
 This repository is licensed under the MIT License. See the [LICENSE](./LICENSE) file for more details.
 
-
-<!-- Back to top button -->
 <div align="right">
-    <a href="#readme-top"><img src="https://img.shields.io/badge/Back%20to%20Top-%E2%86%A9-blue" alt="Back to Top"/></a>
-</div>
-
-<!-- Add this ID at the top of your README -->
-<a name="readme-top"></a>
-
-# Your Project Title
-Rest of your README content goes here...
-
-
-<!-- Add this ID at the top of your README -->
-<a name="readme-top"></a>
-
-# Your Project Title
-Your content goes here...
-
-<!-- Sticky Back to Top Button -->
-<div id="top" style="position: fixed; bottom: 20px; right: 20px;">
     <a href="#readme-top">
-        <img width="35" src="https://github.com/FortAwesome/Font-Awesome/blob/6.x/svgs/solid/circle-up.svg" alt="Back to Top" title="Back to Top">
+        <img width="20" src="./circle-up.svg" alt="" />
     </a>
 </div>
-
-<!-- Rest of your README content -->
