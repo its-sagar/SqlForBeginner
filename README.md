@@ -38,6 +38,23 @@ This repository contains solutions to various SQL questions, covering topics fro
 28.  [What is the average salary](#what-is-the-average-salary)
 29.  [How many people draw 2000 to 4000](#how-many-people-draw-2000-to-4000)
 30.  [Display the details of those who do not know clipper cobol and pascal](#display-the-details-of-those-who-do-not-know-clipper-cobol-and-pascal)
+31.  [Display the cost of the package developed by each programmer](#display-the-cost-of-the-package-developed-by-each-programmer)
+32.  [Display the sales values of the packages developed by the each programmer](#display-the-sales-values-of-the-packages-developed-by-the-each-programmer)
+33.  [Display the number of packages sold by each programmer](#display-the-number-of-packages-sold-by-each-programmer)
+34.  [Display the sales cost of the packages developed by each programmer languages wise](#display-the-sales-cost-of-the-packages-developed-by-each-programmer-languages-wise)
+35.  [Display each languages with average development cost average selling cost and average price per copy](#display-each-languages-with-average-development-cost-average-selling-cost-and-average-price-per-copy)
+36.  [Display each programmers name costliest package and cheapest packages developed by him or her](#display-each-programmers-name-costliest-package-and-cheapest-packages-developed-by-him-or-her)
+37.  [Display each institute namewith the number of courses average cost per course](#display-each-institute-namewith-the-number-of-courses-average-cost-per-course)
+38.  [Display each institute name with number of students](#display-each-institute-name-with-number-of-students)
+39.  [Display the name of male and female programmers](#display-the-name-of-male-and-female-programmers)
+40.  [Display the programmers name and their packages](#display-the-programmers-name-and-their-packages)
+41.  [Display the number of packages in each languages except c and cpp](#display-the-number-of-packages-in-each-languages-except-c-and-cpp)
+42.  [Display the number of packages in each languages for which development cost is less than 1000](#display-the-number-of-packages-in-each-languages-for-which-development-cost-is-less-than-1000)
+43.  [Display the average difference between scost and dcost for each language](#display-the-average-difference-between-scost-and-dcost-for-each-language)
+44.  [Display the total cost dcost and amount to be recovered for each programmer for those whose dcost has not yet been recovered](#display-the-total-cost-dcost-and-amount-to-be-recovered-for-each-programmer-for-those-whose-dcost-has-not-yet-been-recovered)
+45.  [Display highest lowest and average salaries for those earn more than 2000](#display-highest-lowest-and-average-salaries-for-those-earn-more-than-2000)
+
+
 
 
 
@@ -529,7 +546,297 @@ where prof1 not in ("clipper", "cobol", "pascal") and prof2 not in ("clipper", "
 
 
 
+## Display the cost of the package developed by each programmer.
 
+- [Question 31](./sql_solutions/Beginner/question31.sql): Display the cost of the package developed by each programmer.
+
+<div align="right">
+    <a href="#readme-top">
+        <img width="20" src="./circle-up.svg" alt="" />
+    </a>
+</div>
+
+```sql
+select pname , sum(dcost) as Total_Cost from software
+group by pname;
+```
+
+## Display the sales values of the packages developed by the each programmer
+
+- [Question 32](./sql_solutions/Beginner/question32.sql): Display the sales values of the packages developed by the each programmer
+
+<div align="right">
+    <a href="#readme-top">
+        <img width="20" src="./circle-up.svg" alt="" />
+    </a>
+</div>
+
+```sql
+select pname , sum(scost*sold) as Total_Cost from software
+group by pname;
+```
+
+##  Display the number of packages sold by each programmer
+
+- [Question 33](./sql_solutions/Beginner/question33.sql): Display the number of packages sold by each programmer
+
+<div align="right">
+    <a href="#readme-top">
+        <img width="20" src="./circle-up.svg" alt="" />
+    </a>
+</div>
+
+```sql
+select pname, sum(sold) as No_of_package_sold from software
+group by pname;
+```
+
+##  Display the sales cost of the packages developed by each programmer languages wise.
+
+- [Question 34](./sql_solutions/Beginner/question34.sql): Display the sales cost of the packages developed by each programmer, languages wise.
+
+<div align="right">
+    <a href="#readme-top">
+        <img width="20" src="./circle-up.svg" alt="" />
+    </a>
+</div>
+
+```sql
+SELECT pname, dev_in, SUM(scost) AS total_sales_cost
+FROM software
+GROUP BY pname, dev_in
+order by dev_in;
+```
+
+##  Display each languages with average development cost average selling cost and average price per copy
+
+- [Question 35](./sql_solutions/Beginner/question35.sql): Display each languages with average development cost, average selling cost and average price per copy.
+
+<div align="right">
+    <a href="#readme-top">
+        <img width="20" src="./circle-up.svg" alt="" />
+    </a>
+</div>
+
+```sql
+select dev_in, 
+avg(dcost) as Avg_dev_cost, 
+avg(scost) as Avg_sale_cost, 
+sum(scost*sold)/sum(sold) as Avg_price_per_copy
+from software
+group by dev_in;
+```
+
+##  Display each programmers name costliest package and cheapest packages developed by him or her.
+
+- [Question 36](./sql_solutions/Beginner/question36.sql): Display each programmers name costliest package and cheapest packages developed by him/her.
+
+<div align="right">
+    <a href="#readme-top">
+        <img width="20" src="./circle-up.svg" alt="" />
+    </a>
+</div>
+
+```sql
+SELECT 
+    costliest.pname,
+    costliest.title AS costliest_package_title,
+    costliest.dev_in AS costliest_language,
+    costliest.scost AS costliest_price,
+    cheapest.title AS cheapest_package_title,
+    cheapest.dev_in AS cheapest_language,
+    cheapest.scost AS cheapest_price
+FROM 
+    (SELECT pname, MAX(scost) AS max_scost FROM software GROUP BY pname) AS max_price
+JOIN 
+    software AS costliest 
+    ON max_price.pname = costliest.pname AND max_price.max_scost = costliest.scost
+JOIN 
+    (SELECT pname, MIN(scost) AS min_scost FROM software GROUP BY pname) AS min_price
+    ON max_price.pname = min_price.pname
+JOIN 
+    software AS cheapest 
+    ON min_price.pname = cheapest.pname AND min_price.min_scost = cheapest.scost;
+
+SELECT *
+FROM 
+    (SELECT pname, MAX(scost) AS max_scost FROM software GROUP BY pname) AS max_price
+JOIN 
+    software AS costliest 
+    ON max_price.pname = costliest.pname AND max_price.max_scost = costliest.scost
+JOIN 
+    (SELECT pname, MIN(scost) AS min_scost FROM software GROUP BY pname) AS min_price
+    ON max_price.pname = min_price.pname
+JOIN 
+    software AS cheapest 
+    ON min_price.pname = cheapest.pname AND min_price.min_scost = cheapest.scost;
+```
+
+Or,
+
+```sql
+select min_p.pname, min_p.cheapest_price, max_p.costliest_price
+from
+(select pname, min(scost) as cheapest_price  from software group by pname) as min_p
+join (select pname, max(scost) as costliest_price from software group by pname) as max_p
+on min_p.pname =max_p.pname;
+```
+
+##  Display each institute namewith the number of courses average cost per course.
+
+- [Question 37](./sql_solutions/Beginner/question37.sql): Display each institute namewith the number of courses, average cost per course.
+
+<div align="right">
+    <a href="#readme-top">
+        <img width="20" src="./circle-up.svg" alt="" />
+    </a>
+</div>
+
+```sql
+select splace, count(course) as No_of_courses, avg(ccost) as avg_cost
+from studies
+group by splace;
+```
+
+##  Display each institute name with number of students
+
+- [Question 38](./sql_solutions/Beginner/question38.sql): Display each institute name with number of students
+
+<div align="right">
+    <a href="#readme-top">
+        <img width="20" src="./circle-up.svg" alt="" />
+    </a>
+</div>
+
+```sql
+select splace, count(pname) as No_of_students
+from studies
+group by splace;
+```
+
+##  Display the name of male and female programmers.
+
+- [Question 39](./sql_solutions/Beginner/question39.sql):  Display the name of male and female programmers.
+
+<div align="right">
+    <a href="#readme-top">
+        <img width="20" src="./circle-up.svg" alt="" />
+    </a>
+</div>
+
+```sql
+select distinct(pname), sex
+from programmer
+where sex = 'M'
+union
+select distinct(pname), sex
+from programmer
+ where sex = 'F';
+```
+
+##  Display the programmers name and their packages.
+
+- [Question 40](./sql_solutions/Beginner/question40.sql): Display the programmers name and their packages.
+
+<div align="right">
+    <a href="#readme-top">
+        <img width="20" src="./circle-up.svg" alt="" />
+    </a>
+</div>
+
+```sql
+select pname, title from software
+order by pname;
+```
+
+##  Display the number of packages in each languages except c and cpp
+
+- [Question 41](./sql_solutions/Beginner/question41.sql): Display the number of packages in each languages, except c and c++
+
+<div align="right">
+    <a href="#readme-top">
+        <img width="20" src="./circle-up.svg" alt="" />
+    </a>
+</div>
+
+```sql
+select dev_in, count(title)
+from software
+where dev_in != 'C' and dev_in != "C++"
+group by dev_in;
+```
+
+##  Display the number of packages in each languages for which development cost is less than 1000
+
+- [Question 42](./sql_solutions/Beginner/question42.sql): Display the number of packages in each languages for which development cost is less than 1000
+
+<div align="right">
+    <a href="#readme-top">
+        <img width="20" src="./circle-up.svg" alt="" />
+    </a>
+</div>
+
+```sql
+select dev_in, count(title) as No_of_package
+from software
+where dcost < 1000
+group by dev_in;
+```
+
+##  Display the average difference between scost and dcost for each language
+
+- [Question 43](./sql_solutions/Beginner/question43.sql): Display the average difference between scost and dcost for each language
+
+<div align="right">
+    <a href="#readme-top">
+        <img width="20" src="./circle-up.svg" alt="" />
+    </a>
+</div>
+
+```sql
+select dev_in, avg(dcost-scost) as Avg_diff
+from software
+group by dev_in;
+```
+
+##  Display the total cost dcost and amount to be recovered for each programmer for those whose dcost has not yet been recovered
+
+- [Question 44](./sql_solutions/Beginner/question44.sql): Display the total cost, dcost and amount to be recovered for each programmer for those whose dcost has not yet been recovered
+
+<div align="right">
+    <a href="#readme-top">
+        <img width="20" src="./circle-up.svg" alt="" />
+    </a>
+</div>
+
+```sql
+select pname, 
+sum(dcost) as Total_dev_Cost, 
+sum(scost) as Total_sale_cost, 
+sum(scost*sold) as Amount_recoverd,
+sum(dcost)-sum(scost*sold) as Amount_to_be_recover
+from software
+group by pname
+having sum(dcost) > sum(scost*sold);
+```
+
+##  Display highest lowest and average salaries for those earn more than 2000
+
+- [Question 45](./sql_solutions/Beginner/question4s5.sql): Display highest,lowest and average salaries for those earn more than 2000
+
+<div align="right">
+    <a href="#readme-top">
+        <img width="20" src="./circle-up.svg" alt="" />
+    </a>
+</div>
+
+```sql
+select max(salary) as Highest_salary,
+Avg(salary) as Average_salary,
+min(salary) as Lowest_salary
+from programmer
+where salary > 2000;
+```
 
 
 
