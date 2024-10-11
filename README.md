@@ -21,7 +21,7 @@ Basic SQL questions covering topics like simple `SELECT` queries, `WHERE` clause
 
 ### Find out the selling cost average for packages developed in PASCAL 
 
-- [Question 1](./sql_solutions/beginner/question1.sql): Find out the selling cost average for packages developed in PASCAL.
+- [Question 1](./sql_solutions/Beginner/question1.sql): Find out the selling cost average for packages developed in PASCAL.
 ```sql
 select dev_in, avg(scost) from software
 where dev_in = "pascal"
@@ -29,14 +29,14 @@ group by dev_in;
 ```
 ### Display the Names and Ages of all the Programmers
 
-- [Question 2](./sql_solutions/beginner/question2.sql): Display the Names and Ages of all the Programmers.
+- [Question 2](./sql_solutions/Beginner/question2.sql): Display the Names and Ages of all the Programmers.
   
 ```sql
 select pnmae, date_format(from_days(datediff(now(), dob)), '%d-%m-%y') as age from programmer;
 ```
 ### Display the Names of those who have done the DAP Course
 
-- [Question 2](./sql_solutions/beginner/question2.sql): Display the Names of those who have done the DAP Course
+- [Question 3](./sql_solutions/Beginner/question3.sql): Display the Names of those who have done the DAP Course
   
 ```sql
 select pname from studies
@@ -44,7 +44,7 @@ where course = 'DAP';
 ```
 ### What is the HIGHEST number of copies sold by a package
 
-- [Question 2](./sql_solutions/beginner/question2.sql): What is the HIGHEST number of copies sold by a package
+- [Question 4](./sql_solutions/Beginner/question4.sql): What is the HIGHEST number of copies sold by a package
 
 ```sql
 select * from software
@@ -53,7 +53,7 @@ limit 1;
 ```
 ### Display the NAMES AND DATE OF BIRTH of all programmers born in JANUARY
 
-- [Question 2](./sql_solutions/beginner/question2.sql): Display the NAMES AND DATE OF BIRTH of all programmers born in JANUARY.
+- [Question 5](./sql_solutions/Beginner/question5.sql): Display the NAMES AND DATE OF BIRTH of all programmers born in JANUARY.
 
 ```sql
 
@@ -63,7 +63,7 @@ where dob like '_____01___';
 
 ### Display the LOWEST course fee
 
-- [Question 2](./sql_solutions/beginner/question2.sql): Display the LOWEST course fee.
+- [Question 6](./sql_solutions/Beginner/question6.sql): Display the LOWEST course fee.
 ```sql
 select ccost as fee from studies
 order by ccost
