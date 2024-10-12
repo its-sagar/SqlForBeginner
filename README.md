@@ -91,6 +91,32 @@ This repository contains solutions to various SQL questions, covering topics fro
 81.  [Who are the male programmers earning below the average salary of female programmers](#who-are-the-male-programmers-earning-below-the-average-salary-of-female-programmers)
 82.  [Who are the female programmers earning more than the highest paid male programmer](#who-are-the-female-programmers-earning-more-than-the-highest-paid-male-programmer)
 83.  [Which language has been seated as prof1 by the most of the programmers](#which-language-has-been-seated-as-prof1-by-the-most-of-the-programmers)
+84.  [Display the details of those who are drawing the same salary](#display-the-details-of-those-who-are-drawing-the-same-salary)
+85.  [Display the details of the software developed by the male programmers earning more than 3000](#display-the-details-of-the-software-developed-by-the-male-programmers-earning-more-than-3000)
+86.  [Display the details of the packages developed in pascal by female programmers](#display-the-details-of-the-packages-developed-in-pascal-by-female-programmers)
+87.  [Display the details of those programmers who joined before 1990](#display-the-details-of-those-programmers-who-joined-before-1990)
+88.  [Display the details of the software developed in c by female programmers of PRAGATHI](#display-the-details-of-the-software-developed-in-c-by-female-programmers-of-pragathi)
+89.  [Display the number of packages number of copies sold and sales values of each programmer institute wise](#display-the-number-of-packages-number-of-copies-sold-and-sales-values-of-each-programmer-institute-wise)
+90.  [Display the details of the software developed in dbase by male programmers who belong to the institute in which most number of programmers studied](#display-the-details-of-the-software-developed-in-dbase-by-male-programmers-who-belong-to-the-institute-in-which-most-number-of-programmers-studied)
+91.  [Display the detail of software developed by the male programmers born in 1965 and female programmers after 1975](#display-the-detail-of-software-developed-by-the-male-programmers-born-in-1965-and-female-programmers-after-1975)
+92.  [Display the details of the software that was developed in the languages that is not the programmers first proficiency](#display-the-details-of-the-software-that-was-developed-in-the-languages-that-is-not-the-programmers-first-proficiency)
+93.  [Display the details of the software that was developed in the language which is neither the first nor the second proficiency of the programmer](#display-the-details-of-the-software-that-was-developed-in-the-language-which-is-neither-the-first-nor-the-second-proficiency-of-the-programmer)
+94.  [Display the details of the software developed by the male students of sabhari](#display-the-details-of-the-software-developed-by-the-male-students-of-sabhari)
+95.  [Display the names of programmers who have not developed by the male students of sabhari](#display-the-names-of-programmers-who-have-not-developed-by-the-male-students-of-sabhari)
+96.  [What is the total cost of the software developed by the programmers by apple](#what-is-the-total-cost-of-the-software-developed-by-the-programmers-by-apple)
+97.  [Who are the programmers who joined in the same day](#who-are-the-programmers-who-joined-in-the-same-day)
+98.  [Who are the programmers who have the same prof2](#who-are-the-programmers-who-have-the-same-prof2)
+99.  [Display the total sales value of software institute wise](#display-the-total-sales-value-of-software-institute-wise)
+100.  [In which institution does the person who developed the costliest package study](#in-which-institution-does-the-person-who-developed-the-costliest-package-study)
+101.  [Which language listed in prof1 and prof2 has not been used to develop any package](#which-language-listed-in-prof1-and-prof2-has-not-been-used-to-develop-any-package)
+102.  [How much does the person who developed the highest selling package earn and what course did he she undergo](#how-much-does-the-person-who-developed-the-highest-selling-package-earn-and-what-course-did-he-she-undergo)
+103.  [How many months will it take for each programmer to recover the cost of the course underwent](#how-many-months-will-it-take-for-each-programmer-to-recover-the-cost-of-the-course-underwent)
+104.  [Which is the costliest package developed by a person which under 3 year experience](#which-is-the-costliest-package-developed-by-a-person-which-under-3-year-experience)
+105.  [What is the average salary for those whose software sales value is more than 50000](#what-is-the-average-salary-for-those-whose-software-sales-value-is-more-than-50000)
+106.  [How many package were developed by the person studied in institute that charge rthe lowest course fee](#how-many-package-were-developed-by-the-person-studied-in-institute-that-charge-rthe-lowest-course-fee)
+
+
+
 
 
 
@@ -1569,6 +1595,420 @@ group by prof1
 order by No_of_Programmer desc
 limit 1;
 ```
+##  Display the details of those who are drawing the same salary
+
+- [Question 39](./sql_solutions/Intermediate/question39.sql):  Display the details of those who are drawing the same salary
+
+ <div align="right">
+    <a href="#readme-top">
+        <img width="20" src="./circle-up.svg" alt="" />
+    </a>
+</div>
+
+```sql 
+select * from programmer
+where salary in ( select salary from programmer
+group by salary
+having count(*) > 1)
+order by salary;
+```
+
+##  Display the details of the software developed by the male programmers earning more than 3000
+
+- [Question 40](./sql_solutions/Intermediate/question40.sql):  Display the details of the software developed by the male programmers earning more than 3000
+
+<div align="right">
+    <a href="#readme-top">
+        <img width="20" src="./circle-up.svg" alt="" />
+    </a>
+</div>
+
+```sql  
+select * from programmer
+where sex = 'M' and salary > 3000;
+```
+
+##  Display the details of the packages developed in pascal by female programmers
+
+- [Question 41](./sql_solutions/Intermediate/question41.sql):  Display the details of the packages developed in pascal by female programmers
+
+<div align="right">
+    <a href="#readme-top">
+        <img width="20" src="./circle-up.svg" alt="" />
+    </a>
+</div>
+
+```sql
+select * from software
+where dev_in = 'PASCAL' and pname in (select pname from programmer where sex = 'F');
+```
+
+##  Display the details of those programmers who joined before 1990
+
+- [Question 42](./sql_solutions/Intermediate/question42.sql):  Display the details of those programmers who joined before 1990
+
+<div align="right">
+    <a href="#readme-top">
+        <img width="20" src="./circle-up.svg" alt="" />
+    </a>
+</div>
+
+```sql 
+select * from programmer
+where year(doj) < 1990;
+```
+
+##  Display the details of the software developed in c by female programmers of PRAGATHI
+
+- [Question 43](./sql_solutions/Intermediate/question43.sql):  Display the details of the software developed in c by female programmers of PRAGATHI
+  
+<div align="right">
+    <a href="#readme-top">
+        <img width="20" src="./circle-up.svg" alt="" />
+    </a>
+</div>
+
+```sql 
+select * from software
+where dev_in = 'c' and pname in (
+select p.pname from programmer
+as p
+join studies as s
+on p.pname = s.pname
+where s.splace = 'PRAGATHI' and p.sex = 'F');
+```
+
+##  Display the number of packages number of copies sold and sales values of each programmer institute wise
+
+- [Question 44](./sql_solutions/Intermediate/question44.sql):  Display the number of packages , number of copies sold and sales values of each programmer, institute wise
+
+<div align="right">
+    <a href="#readme-top">
+        <img width="20" src="./circle-up.svg" alt="" />
+    </a>
+</div>
+
+```sql   
+select p.pname as name,
+s.splace as institution,
+sum(sold) as No_of_copies_sold,
+sum(scost * sold) as sales_value
+from software as p
+join studies as s
+on s.pname = p.pname
+group by institution, name;
+```
+
+##  Display the details of the software developed in dbase by male programmers who belong to the institute in which most number of programmers studied
+
+- [Question 45](./sql_solutions/Intermediate/question45.sql):  Display the details of the software developed in dbase by male programmers who belong to the institute in which most number of programmers studied
+ 
+<div align="right">
+    <a href="#readme-top">
+        <img width="20" src="./circle-up.svg" alt="" />
+    </a>
+</div>
+
+```sql  
+select p.*, 
+s.SPLACE, s.COURSE, s.CCOST,
+sw.TITLE	, sw.DEV_IN, sw.DCOST, sw.SCOST, sw.SOLD
+from programmer as p
+join studies as s
+on s.pname = p.pname
+join software as sw
+on sw.pname = s. pname
+where p.sex = 'M' and sw.dev_in = 'DBASE' and s.splace in (select splace from studies
+			group by splace
+			having count(*) = (
+				select max(c) 
+				from (select splace, count(*) as c from studies 
+				group by splace) as temp));
+
+```
+
+or,
+
+```sql
+select *
+from programmer as p
+join studies as s using(pname)
+join software as sw using(pname)
+where p.sex = 'M' and sw.dev_in = 'DBASE' and s.splace in (select splace from studies
+			group by splace
+			having count(*) = (
+				select max(c) 
+				from (select splace, count(*) as c from studies 
+				group by splace) as temp));
+
+```
+
+##  Display the detail of software developed by the male programmers born in 1965 and female programmers after 1975
+
+- [Question 46](./sql_solutions/Intermediate/question46.sql):   Display the detail of software developed by the male programmers born in 1965 and female programmers after 1975
+
+<div align="right">
+    <a href="#readme-top">
+        <img width="20" src="./circle-up.svg" alt="" />
+    </a>
+</div>
+
+```sql 
+select * from programmer as p
+join software as s using(pname)
+where (sex = 'M' and year(dob) = 1965) or (sex = 'F' and year(dob) > 1975);
+```
+## Display the details of the software that was developed in the languages that is not the programmers first proficiency
+
+- [Question 47](./sql_solutions/Intermediate/question47.sql):   Display the details of the software that was developed in the languages that is not the programmers’s first proficiency
+
+<div align="right">
+    <a href="#readme-top">
+        <img width="20" src="./circle-up.svg" alt="" />
+    </a>
+</div>
+
+```sql
+select * from programmer as p
+join software as sw using(pname)
+where not(p.prof1= sw.dev_in);
+```
+
+##  Display the details of the software that was developed in the language which is neither the first nor the second proficiency of the programmer
+
+- [Question 48](./sql_solutions/Intermediate/question48.sql):  Display the details of the software that was developed in the language which is neither the first nor the second proficiency of the programmer
+
+<div align="right">
+    <a href="#readme-top">
+        <img width="20" src="./circle-up.svg" alt="" />
+    </a>
+</div>
+
+```sql   
+select * from programmer as p
+join software as sw using(pname)
+where p.prof1 != sw.dev_in and p.prof2 != sw.dev_in;
+```
+
+##  Display the details of the software developed by the male students of sabhari
+
+- [Question 49](./sql_solutions/Intermediate/question49.sql):  Display the details of the software developed by the male students of sabhari
+ 
+<div align="right">
+    <a href="#readme-top">
+        <img width="20" src="./circle-up.svg" alt="" />
+    </a>
+</div>
+
+```sql  
+select *
+from programmer as p
+join studies as st using(pname)
+join software as sw using(pname)
+where p.sex = 'M' and st.splace = 'sabhari';
+```
+
+##  Display the names of programmers who have not developed by the male students of sabhari
+
+- [Question 50](./sql_solutions/Intermediate/question50.sql):  Display the names of programmers who have not developed by the male students of sabhari
+
+<div align="right">
+    <a href="#readme-top">
+        <img width="20" src="./circle-up.svg" alt="" />
+    </a>
+</div>
+
+```sql   
+select *
+from programmer as p
+join studies as st using(pname)
+join software as sw using(pname)
+where not(p.sex = 'M' and st.splace = 'sabhari');
+```
+
+##  What is the total cost of the software developed by the programmers by apple
+
+- [Question 51](./sql_solutions/Intermediate/question51.sql):  What is the total cost of the software developed by the programmers by apple
+
+<div align="right">
+    <a href="#readme-top">
+        <img width="20" src="./circle-up.svg" alt="" />
+    </a>
+</div>
+
+```sql   
+select pname, splace, sum(dcost) as Development_cost
+from studies as st
+join software as sw using(pname)
+where st.splace = 'apple'
+group by pname, splace;
+```
+
+##  Who are the programmers who joined in the same day
+
+- [Question 52](./sql_solutions/Intermediate/question52.sql):  Who are the programmers who joined in the same day
+
+<div align="right">
+    <a href="#readme-top">
+        <img width="20" src="./circle-up.svg" alt="" />
+    </a>
+</div>
+
+```sql   
+select doj, group_concat(pname)
+from programmer
+group by doj
+having count(pname) > 1;
+```
+
+## Who are the programmers who have the same prof2
+
+- [Question 53](./sql_solutions/Intermediate/question53.sql):  Who are the programmers who have the same prof2
+
+<div align="right">
+    <a href="#readme-top">
+        <img width="20" src="./circle-up.svg" alt="" />
+    </a>
+</div>
+
+```sql   
+select prof2 as Proficiency, group_concat(pname) as Name
+from programmer
+group by prof2
+having count(pname) > 1;
+```
+
+##  Display the total sales value of software institute wise
+
+- [Question 54](./sql_solutions/Intermediate/question54.sql):  Display the total sales value of software institute wise
+
+<div align="right">
+    <a href="#readme-top">
+        <img width="20" src="./circle-up.svg" alt="" />
+    </a>
+</div>
+
+```sql   
+select st.splace, sum(scost*sold) as Total_sales_value from software as sw
+join studies as st using(pname)
+group by st.splace;
+```
+
+##  In which institution does the person who developed the costliest package study
+
+- [Question 55](./sql_solutions/Intermediate/question55.sql):  In which institution does the person who developed the costliest package study
+ 
+<div align="right">
+    <a href="#readme-top">
+        <img width="20" src="./circle-up.svg" alt="" />
+    </a>
+</div>
+
+```sql  
+select st.splace
+from studies as st
+join software as sw using(pname)
+order by sw.scost desc
+limit 1;
+```
+
+##  Which language listed in prof1 and prof2 has not been used to develop any package
+
+- [Question 56](./sql_solutions/Intermediate/question56.sql):  Which language listed in prof1 and prof2 has not been used to develop any package
+
+<div align="right">
+    <a href="#readme-top">
+        <img width="20" src="./circle-up.svg" alt="" />
+    </a>
+</div>
+
+```sql   
+select t.proficiency from
+(select prof1 as proficiency
+from programmer
+union
+select prof2 as proficiency
+from programmer
+order by proficiency) as t
+left join software as sw
+on t.proficiency = sw.dev_in
+where pname is null;
+```
+
+##  How much does the person who developed the highest selling package earn and what course did he she undergo
+
+- [Question 57](./sql_solutions/Intermediate/question57.sql):  How much does the person who developed the highest selling package earn and what course did he/she undergo
+ 
+<div align="right">
+    <a href="#readme-top">
+        <img width="20" src="./circle-up.svg" alt="" />
+    </a>
+</div>
+
+```sql  
+SELECT s.pname, s.dcost AS earnings, st.course
+FROM software AS s
+JOIN studies AS st ON s.pname = st.pname
+WHERE s.sold = (
+    SELECT MAX(sold) 
+    FROM software
+);
+```
+
+
+##  How many months will it take for each programmer to recover the cost of the course underwent
+
+- [Question 58](./sql_solutions/Intermediate/question58.sql):   How many months will it take for each programmer to recover the cost of the course uderwent
+
+<div align="right">
+    <a href="#readme-top">
+        <img width="20" src="./circle-up.svg" alt="" />
+    </a>
+</div>
+
+```sql   
+select p.pname, st.course, ceil(st.ccost/p.salary) from programmer as p
+join studies as st using(pname);
+```
+
+##  What is the average salary for those whose software sales value is more than 50000
+
+- [Question 59](./sql_solutions/Intermediate/question59.sql):   What is the average salary for those whose software’s sales value is more than 50000
+
+<div align="right">
+    <a href="#readme-top">
+        <img width="20" src="./circle-up.svg" alt="" />
+    </a>
+</div>
+
+```sql   
+select avg(p.salary) from programmer as p
+join software as sw using(pname)
+where (sw.scost*sw.sold) > 50000;
+```
+
+##  How many package were developed by the person studied in institute that charge rthe lowest course fee
+
+- [Question 60](./sql_solutions/Intermediate/question60.sql):   How many package were developed by the person studied in institute that charge rthe lowest course fee
+
+<div align="right">
+    <a href="#readme-top">
+        <img width="20" src="./circle-up.svg" alt="" />
+    </a>
+</div>
+
+```sql   
+SELECT COUNT(sw.title) AS package_count
+FROM software AS sw
+JOIN studies AS st ON sw.pname = st.pname
+WHERE st.splace = (
+    SELECT splace
+    FROM studies
+    ORDER BY ccost ASC
+    LIMIT 1
+);
+```
+
 
 ## Advanced
 Advanced SQL questions covering `subqueries`, `window functions`, `CTEs`, and performance optimizations.
