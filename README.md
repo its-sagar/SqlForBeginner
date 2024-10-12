@@ -53,6 +53,45 @@ This repository contains solutions to various SQL questions, covering topics fro
 43.  [Display the average difference between scost and dcost for each language](#display-the-average-difference-between-scost-and-dcost-for-each-language)
 44.  [Display the total cost dcost and amount to be recovered for each programmer for those whose dcost has not yet been recovered](#display-the-total-cost-dcost-and-amount-to-be-recovered-for-each-programmer-for-those-whose-dcost-has-not-yet-been-recovered)
 45.  [Display highest lowest and average salaries for those earn more than 2000](#display-highest-lowest-and-average-salaries-for-those-earn-more-than-2000)
+46.  [Who is the highest paid C programmer](#who-is-the-highest-paid-c-programmer)
+47.  [Who is the highest paid Cobol programmer](#who-is-the-highest-paid-cobol-programmer)
+48.  [Display the names of the highest paid programmer for each language in prof1](#display-the-names-of-the-highest-paid-programmer-for-each-language-in-prof1)
+49.  [Who is the least experienced programmer](#who-is-the-least-experienced-programmer)
+50.  [Who is the most experienced male programmer knowing pascal](#who-is-the-most-experienced-male-programmer-knowing-pascal)
+51.  [Which language is known by only one programmer](#which-language-is-known-by-only-one-programmer)
+52.  [Who is that above programmer](#who-is-that-above-programmer)
+53.  [Who is the youngest programmer knowing dbase](#who-is-the-youngest-programmer-knowing-dbase)
+54.  [Which female programmer earning more than 3000](#which-female-programmer-earning-more-than-3000)
+55.  [Which institute has the most number of students](#which-institute-has-the-most-number-of-students)
+56.  [Which course has been done by the most of the students](#which-course-has-been-done-by-the-most-of-the-students)
+57.  [Display the name of the institute and course which has below average course fee](#display-the-name-of-the-institute-and-course-which-has-below-average-course-fee)
+58.  [Which is the costliest course](#which-is-the-costliest-course)
+59.  [Which institute conducts the costliest course](#which-institute-conducts-the-costliest-course)
+60.  [Which course has below average number of students](#which-course-has-below-average-number-of-students)
+61.  [Which institute conducts the above course](#which-institute-conducts-the-above-course)
+62.  [Display the name of the courses whose fees are within 1000 positive or negative of the average fee](#display-the-name-of-the-courses-whose-fees-are-within-1000-positive-or-negative-of-the-average-fee)
+63.  [Which package has the highest development cost](#which-package-has-the-highest-development-cost)
+64.  [Which package has the lowest selling cost](#which-package-has-the-lowest-selling-cost)
+65.  [Who developed the package that has sold the least number of copies](#who-developed-the-package-that-has-sold-the-least-number-of-copies)
+66.  [Which language was used to develop the package which has the highest sales amount](#which-language-was-used-to-develop-the-package-which-has-the-highest-sales-amount)
+67.  [How many copies of the package that has the least difference between development and selling cost were sold](#how-many-copies-of-the-package-that-has-the-least-difference-between-development-and-selling-cost-were-sold)
+68.  [Which is the costliest package developed in pascal](#which-is-the-costliest-package-developed-in-pascal)
+69.  [Which language was used to develop the most number of packages](#which-language-was-used-to-develop-the-most-number-of-packages)
+70.  [Which programmer has developed the highest number of packages](#which-programmer-has-developed-the-highest-number-of-packages)
+71.  [Who is the author of the READ ME package](#who-is-the-author-of-the-read-me-package)
+72.  [Display the name of the package which have sold less than the average number of copies](#display-the-name-of-the-package-which-have-sold-less-than-the-average-number-of-copies)
+73.  [Who are the authors of the packages which have recovered more than double the development cost](#who-are-the-authors-of-the-packages-which-have-recovered-more-than-double-the-development-cost)
+74.  [Display the programmer names and the cheapest package developed by them in each languages](#display-the-programmer-names-and-the-cheapest-package-developed-by-them-in-each-languages)
+75.  [Display the language used by each programmer to develop the highest selling and the lowest selling package](#display-the-language-used-by-each-programmer-to-develop-the-highest-selling-and-the-lowest-selling-package)
+76.  [Who is the youngest male programmer born in 1965](#who-is-the-youngest-male-programmer-born-in-1965)
+77.  [Who is the oldest female programmer who joined in 1992](#who-is-the-oldest-female-programmer-who-joined-in-1992)
+78.  [In which year were the most number of programmer join](#in-which-year-were-the-most-number-of-programmer-join)
+79.  [In which month did most number of programmer join](#in-which-month-did-most-number-of-programmer-join)
+80.  [In which language are most of the programmer proficient](#in-which-language-are-most-of-the-programmer-proficient)
+81.  [Who are the male programmers earning below the average salary of female programmers](#who-are-the-male-programmers-earning-below-the-average-salary-of-female-programmers)
+82.  [Who are the female programmers earning more than the highest paid male programmer](#who-are-the-female-programmers-earning-more-than-the-highest-paid-male-programmer)
+83.  [Which language has been seated as prof1 by the most of the programmers](#which-language-has-been-seated-as-prof1-by-the-most-of-the-programmers)
+
 
 
 
@@ -65,6 +104,7 @@ This repository contains solutions to various SQL questions, covering topics fro
         <img width="20" src="./circle-up.svg" alt="" />
     </a>
 </div>
+
 
 ## Section
 - [Beginner](#beginner)
@@ -854,8 +894,681 @@ where salary > 2000;
 ## Intermediate
 Intermediate-level SQL questions including `JOINs`, `GROUP BY`, `HAVING`, and more complex aggregates.
 
-- [Question 1](./sql_solutions/intermediate/question1.sql): Write a query to find the total number of employees in each department.
-- [Question 2](./sql_solutions/intermediate/question2.sql): Write a query to find the average salary of employees grouped by department.
+##  Who is the highest paid C programmer
+
+- [Question 1](./sql_solutions/Intermediate/question1.sql): Who is the highest paid C programmer
+
+<div align="right">
+    <a href="#readme-top">
+        <img width="20" src="./circle-up.svg" alt="" />
+    </a>
+</div>
+
+```sql
+select * from programmer
+where prof1 = 'c' or prof2 = 'c'
+order by salary desc
+limit 1;
+```
+
+## Who is the highest paid Cobol programmer
+
+- [Question 2](./sql_solutions/Intermediate/question2.sql): Who is the highest paid Cobol programmer
+
+<div align="right">
+    <a href="#readme-top">
+        <img width="20" src="./circle-up.svg" alt="" />
+    </a>
+</div>
+
+```sql
+select * from programmer
+where prof1 = 'COBOL' or prof2 = 'COBOL'
+order by salary desc
+limit 1;
+```
+
+##  Display the names of the highest paid programmer for each language in prof1
+
+- [Question 3](./sql_solutions/Intermediate/question3.sql):  Display the names of the highest paid programmer for each language(prof1)
+
+<div align="right">
+    <a href="#readme-top">
+        <img width="20" src="./circle-up.svg" alt="" />
+    </a>
+</div>
+
+```sql
+select * from programmer
+where (prof1, salary) in (
+	select prof1, max(salary) 
+	from programmer 
+	group by prof1);
+```
+
+##   Who is the least experienced programmer
+
+- [Question 4](./sql_solutions/Intermediate/question4.sql):   Who is the least experienced programmer
+
+<div align="right">
+    <a href="#readme-top">
+        <img width="20" src="./circle-up.svg" alt="" />
+    </a>
+</div>
+
+```sql
+ select *, date_format(from_days(datediff(now(),doj)), '%y-%m-%d') as exprience 
+from programmer 
+order by exprience
+limit 1;
+```
+
+##   Who is the most experienced male programmer knowing pascal
+
+- [Question 5](./sql_solutions/Intermediate/question5.sql):   Who is the most experienced male programmer knowing pascal
+
+<div align="right">
+    <a href="#readme-top">
+        <img width="20" src="./circle-up.svg" alt="" />
+    </a>
+</div>
+
+```sql
+select *, date_format(from_days(datediff(now(),doj)), '%y-%m-%d') as exprience 
+from programmer
+where sex = 'M' and prof1 = 'PASCAL' or prof2 = 'PASCAL'
+order by exprience desc
+limit 1;
+```
+
+6.  Which language is known by only one programmer
+
+- [Question 6](./sql_solutions/Intermediate/question6.sql):  Which language is known by only one programmer
+
+<div align="right">
+    <a href="#readme-top">
+        <img width="20" src="./circle-up.svg" alt="" />
+    </a>
+</div>
+
+```sql
+```
+
+7.  Who is that above programmer
+
+- [Question 7](./sql_solutions/Intermediate/question7.sql):  Who is that above programmer
+
+<div align="right">
+    <a href="#readme-top">
+        <img width="20" src="./circle-up.svg" alt="" />
+    </a>
+</div>
+
+```sql
+```
+
+##    Who is the youngest programmer knowing dbase
+
+- [Question 8](./sql_solutions/Intermediate/question8.sql):   Who is the youngest programmer knowing dbase
+
+<div align="right">
+    <a href="#readme-top">
+        <img width="20" src="./circle-up.svg" alt="" />
+    </a>
+</div>
+
+```sql
+select *, date_format(from_days(datediff(now(), dob)), '%y-%m-%d') as age
+from programmer
+where prof1 = 'DBASE' or prof2 = 'DBASE'
+order by age
+limit 1;
+```
+
+##   Which female programmer earning more than 3000
+
+- [Question 9](./sql_solutions/Intermediate/question9.sql):   Which female programmer earning more than 3000 
+<div align="right">
+    <a href="#readme-top">
+        <img width="20" src="./circle-up.svg" alt="" />
+    </a>
+</div>
+
+```sql
+select * from programmer
+where sex = 'F' and salary = 3000;
+```
+
+##    Which institute has the most number of students
+
+- [Question 10](./sql_solutions/Intermediate/question10.sql):    Which institute has the most number of students
+
+<div align="right">
+    <a href="#readme-top">
+        <img width="20" src="./circle-up.svg" alt="" />
+    </a>
+</div>
+
+```sql
+select splace, count(*) as No_of_students
+from studies
+group by splace
+order by No_of_students  desc
+limit 1;
+```
+
+##   Which course has been done by the most of the students
+
+- [Question 11](./sql_solutions/Intermediate/question11.sql):  Which course has been done by the most of the students
+
+<div align="right">
+    <a href="#readme-top">
+        <img width="20" src="./circle-up.svg" alt="" />
+    </a>
+</div>
+
+```sql
+select course, count(*) as No_of_students
+from studies
+group by course
+order by No_of_students desc
+limit 1;
+```
+
+##    Display the name of the institute and course which has below average course fee
+
+- [Question 12](./sql_solutions/Intermediate/question12.sql):   Display the name of the institute and course which has below average course fee
+
+<div align="right">
+    <a href="#readme-top">
+        <img width="20" src="./circle-up.svg" alt="" />
+    </a>
+</div>
+
+```sql
+select splace, course from studies
+where ccost < ( select avg(ccost) from software);
+```
+
+##    Which is the costliest course
+
+ - [Question 13](./sql_solutions/Intermediate/question13.sql):   Which is the costliest course
+
+<div align="right">
+    <a href="#readme-top">
+        <img width="20" src="./circle-up.svg" alt="" />
+    </a>
+</div>
+
+```sql
+select course, ccost
+from studies
+order by ccost desc
+limit 1;
+```
+
+##    Which institute conducts the costliest course
+
+- [Question 14](./sql_solutions/Intermediate/question14.sql):   Which institute conducts the costliest course
+
+<div align="right">
+    <a href="#readme-top">
+        <img width="20" src="./circle-up.svg" alt="" />
+    </a>
+</div>
+
+```sql
+select splace, course, ccost
+from studies
+order by ccost desc
+limit 1;
+```
+
+##    Which course has below average number of students
+
+- [Question 15](./sql_solutions/Intermediate/question15.sql):    Which course has below average number of students
+
+<div align="right">
+    <a href="#readme-top">
+        <img width="20" src="./circle-up.svg" alt="" />
+    </a>
+</div>
+
+```sql
+select course, count(pname) as No_of_students
+from studies
+group by course
+having no_of_students < (select count(pname)/count(distinct(course)) from studies);
+```
+
+
+##    Which institute conducts the above course
+
+- [Question 16](./sql_solutions/Intermediate/question16.sql):    Which institute conducts the above course
+
+<div align="right">
+    <a href="#readme-top">
+        <img width="20" src="./circle-up.svg" alt="" />
+    </a>
+</div>
+
+```sql
+select * 
+from studies
+where course in (
+	select course from studies
+ 	group by course
+	having count(pname) < (
+		 select count(pname)/count(distinct(course)) 
+		from studies));
+```
+
+##    Display the name of the courses whose fees are within 1000 positive or negative of the average fee
+
+- [Question 17](./sql_solutions/Intermediate/question17.sql):   Display the name of the courses whose fees are within 1000 (+or-) of the average fee
+
+<div align="right">
+    <a href="#readme-top">
+        <img width="20" src="./circle-up.svg" alt="" />
+    </a>
+</div>
+
+```sql
+select course
+from studies
+where ccost between (select avg(ccost) - 1000 from studies) and (select avg(ccost) + 1000 from studies);
+```
+
+##   Which package has the highest development cost
+
+- [Question 18](./sql_solutions/Intermediate/question18.sql):  Which package has the highest development cost
+
+<div align="right">
+    <a href="#readme-top">
+        <img width="20" src="./circle-up.svg" alt="" />
+    </a>
+</div>
+
+```sql
+select title, dcost from software
+order by dcost desc
+limit 1;
+```
+
+##   Which package has the lowest selling cost
+
+- [Question 19](./sql_solutions/Intermediate/question19.sql):  Which package has the lowest selling cost
+
+
+<div align="right">
+    <a href="#readme-top">
+        <img width="20" src="./circle-up.svg" alt="" />
+    </a>
+</div>
+
+```sql
+select title, scost
+from software
+order by scost
+limit 1;
+```
+
+##   Who developed the package that has sold the least number of copies
+
+- [Question 20](./sql_solutions/Intermediate/question20.sql):  Who developed the package that has sold the least number of copies
+
+<div align="right">
+    <a href="#readme-top">
+        <img width="20" src="./circle-up.svg" alt="" />
+    </a>
+</div>
+
+```sql
+select * from software
+order by sold
+limit 1;
+```
+
+##    Which language was used to develop the package which has the highest sales amount
+
+- [Question 21](./sql_solutions/Intermediate/question21.sql):   Which language was used to develop the package which has the highest sales amount
+
+<div align="right">
+    <a href="#readme-top">
+        <img width="20" src="./circle-up.svg" alt="" />
+    </a>
+</div>
+
+```sql
+select dev_in, sold
+ from software
+order by sold desc
+limit 1;
+```
+
+##  How many copies of the package that has the least difference between development and selling cost were sold
+
+- [Question 22](./sql_solutions/Intermediate/question22.sql):  How many copies of the package that has the least difference between development and selling cost were sold
+
+<div align="right">
+    <a href="#readme-top">
+        <img width="20" src="./circle-up.svg" alt="" />
+    </a>
+</div>
+
+```sql
+select dcost, scost, abs(dcost-scost), sold
+from software
+order by abs(dcost-scost);
+```
+
+##  Which is the costliest package developed in pascal
+
+- [Question 23](./sql_solutions/Intermediate/question23.sql):  Which is the costliest package developed in pascal
+
+<div align="right">
+    <a href="#readme-top">
+        <img width="20" src="./circle-up.svg" alt="" />
+    </a>
+</div>
+
+```sql
+select title, dev_in, dcost
+from software
+where dev_in = 'PASCAL'
+order by dcost desc
+limit 1;
+```
+
+##    Which language was used to develop the most number of packages
+
+- [Question 24](./sql_solutions/Intermediate/question24.sql):    Which language was used to develop the most number of packages
+
+<div align="right">
+    <a href="#readme-top">
+        <img width="20" src="./circle-up.svg" alt="" />
+    </a>
+</div>
+
+```sql
+select dev_in , count(*) as No_of_package
+from software
+group by dev_in
+having No_of_package = (
+	select max(counts) from (
+		select count(*) as counts 
+		from software 
+		group by dev_in) as temp);
+```
+
+##   Which programmer has developed the highest number of packages
+
+- [Question 25](./sql_solutions/Intermediate/question25.sql):   Which programmer has developed the highest number of packages
+
+<div align="right">
+    <a href="#readme-top">
+        <img width="20" src="./circle-up.svg" alt="" />
+    </a>
+</div>
+
+```sql
+select pname, count(*)
+from software
+group by pname
+having count(*)  = (select max(counts) from (
+select count(*) as counts
+from software
+group by pname) as temp);
+```
+
+##   Who is the author of the READ ME package
+
+- [Question 26](./sql_solutions/Intermediate/question26.sql):  Who is the author of the READ ME package
+
+<div align="right">
+    <a href="#readme-top">
+        <img width="20" src="./circle-up.svg" alt="" />
+    </a>
+</div>
+
+```sql
+select pname, title
+from software
+where title = 'READ ME';
+```
+
+##   Display the name of the package which have sold less than the average number of copies
+
+- [Question 27](./sql_solutions/Intermediate/question27.sql): Display the name of the package which have sold less than the average number of copies
+
+<div align="right">
+    <a href="#readme-top">
+        <img width="20" src="./circle-up.svg" alt="" />
+    </a>
+</div>
+
+```sql
+select title, sold
+from software
+where sold < (select avg(sold) from software);
+```
+
+##   Who are the authors of the packages which have recovered more than double the development cost
+
+- [Question 28](./sql_solutions/Intermediate/question28.sql):   Who are the authors of the packages which have recovered more than double the development cost
+
+<div align="right">
+    <a href="#readme-top">
+        <img width="20" src="./circle-up.svg" alt="" />
+    </a>
+</div>
+
+```sql
+select pname
+from software
+where 2*dcost < scost*sold;
+```
+
+##   Display the programmer names and the cheapest package developed by them in each languages
+
+- [Question 29](./sql_solutions/Intermediate/question29.sql):   Display the programmer names and the cheapest package developed by them in each languages
+
+
+<div align="right">
+    <a href="#readme-top">
+        <img width="20" src="./circle-up.svg" alt="" />
+    </a>
+</div>
+
+```sql
+select pname, dev_in, dcost
+from software
+where (dev_in, dcost) in (select dev_in, min(dcost) from software group by dev_in);
+```
+
+##   Display the language used by each programmer to develop the highest selling and the lowest selling package
+
+- [Question 30](./sql_solutions/Intermediate/question30.sql):   Display the language used by each programmer to develop the highest selling and the lowest selling package
+
+<div align="right">
+    <a href="#readme-top">
+        <img width="20" src="./circle-up.svg" alt="" />
+    </a>
+</div>
+
+```sql
+select s.pname, s.min_scost, t.max_scost
+from (
+select pname, min(scost) as min_scost
+from software
+group by pname) as s
+join
+(select pname, max(scost) as max_scost
+from software
+group by pname) as t
+on s.pname = t.pname;
+```
+
+Or,
+
+```sql
+select p.pname, s.dev_in, p.min_scost, t.pname, s1.dev_in, t.max_scost
+from (
+select pname, min(scost) as min_scost
+from software
+group by pname) as p
+join software as s
+on s.pname = p.pname and s.scost = p.min_scost
+join
+(select pname, max(scost) as max_scost
+from software
+group by pname) as t
+on p.pname = t.pname 
+join software as s1
+on s1.pname = t.pname and s1.scost = t.max_scost;
+```
+
+##   Who is the youngest male programmer born in 1965
+
+- [Question 31](./sql_solutions/Intermediate/question31.sql):  Who is the youngest male programmer born in 1965
+
+<div align="right">
+    <a href="#readme-top">
+        <img width="20" src="./circle-up.svg" alt="" />
+    </a>
+</div>
+
+```sql
+select pname, date_format(from_days(datediff(now(), dob)), '%y-%m-%d') as age 
+from programmer
+where year(dob) = 1965
+order by age
+limit 1;
+```
+
+##    Who is the oldest female programmer who joined in 1992
+
+- [Question 32](./sql_solutions/Intermediate/question32.sql):   Who is the oldest female programmer who joined in 1992
+
+<div align="right">
+    <a href="#readme-top">
+        <img width="20" src="./circle-up.svg" alt="" />
+    </a>
+</div>
+
+```sql
+select pname, date_format(from_days(datediff(now(), dob)), '%y-%m-%d') as age
+from programmer
+where sex = 'F' and year(doj) = 1992
+order by age desc
+limit 1;
+```
+
+##    In which year were the most number of programmer join
+
+- [Question 33](./sql_solutions/Intermediate/question33.sql):  In which year were the most number of programmer join
+
+<div align="right">
+    <a href="#readme-top">
+        <img width="20" src="./circle-up.svg" alt="" />
+    </a>
+</div>
+
+```sql
+select year(doj) as year, count(*) as No_of_Programmer
+from programmer
+group by year
+order by No_of_Programmer desc
+limit 1;
+```
+
+##    In which month did most number of programmer join
+
+- [Question 34](./sql_solutions/Intermediate/question34.sql):   In which month did most number of programmer join
+
+
+<div align="right">
+    <a href="#readme-top">
+        <img width="20" src="./circle-up.svg" alt="" />
+    </a>
+</div>
+
+```sql
+select month(doj) as month, count(*) as No_of_Programmer
+from programmer
+group by month
+order by No_of_Programmer desc
+limit 1;
+```
+
+##   In which language are most of the programmer proficient
+
+- [Question 35](./sql_solutions/Intermediate/question35.sql): In which language are most of the programmer proficient
+
+
+<div align="right">
+    <a href="#readme-top">
+        <img width="20" src="./circle-up.svg" alt="" />
+    </a>
+</div>
+
+```sql
+select prof1, count(*) as No_of_Programmers  from programmer
+group by prof1
+union all
+select prof2, count(*) as No_of_Programmers from programmer
+group by prof2
+order by No_of_Programmers desc
+limit 1;
+```
+
+##   Who are the male programmers earning below the average salary of female programmers
+
+- [Question 36](./sql_solutions/Intermediate/question36.sql):    Who are the male programmers earning below the average salary of female programmers
+
+<div align="right">
+    <a href="#readme-top">
+        <img width="20" src="./circle-up.svg" alt="" />
+    </a>
+</div>
+
+```sql
+select pname, salary from programmer
+where sex = 'M' and salary < (select avg(salary) from programmer where sex = 'F');
+```
+
+##   Who are the female programmers earning more than the highest paid male programmer
+
+- [Question 37](./sql_solutions/Intermediate/question37.sql):    Who are the female programmers earning more than the highest paid male programmer
+
+<div align="right">
+    <a href="#readme-top">
+        <img width="20" src="./circle-up.svg" alt="" />
+    </a>
+</div>
+
+```sql
+select pname, salary from programmer
+where sex = 'F' and salary > (select max(salary) from programmer where sex = 'M');
+```
+
+##    Which language has been seated as prof1 by the most of the programmers
+
+- [Question 38](./sql_solutions/Intermediate/question38.sql):   Which language has been seated as prof1 by the most of the programmers
+
+<div align="right">
+    <a href="#readme-top">
+        <img width="20" src="./circle-up.svg" alt="" />
+    </a>
+</div>
+
+```sql
+select prof1, count(*) as No_of_Programmer
+from programmer
+group by prof1
+order by No_of_Programmer desc
+limit 1;
+```
 
 ## Advanced
 Advanced SQL questions covering `subqueries`, `window functions`, `CTEs`, and performance optimizations.
