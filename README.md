@@ -53,23 +53,23 @@ This repository contains solutions to various SQL questions, covering topics fro
 43.  [Display the average difference between scost and dcost for each language](#display-the-average-difference-between-scost-and-dcost-for-each-language)
 44.  [Display the total cost dcost and amount to be recovered for each programmer for those whose dcost has not yet been recovered](#display-the-total-cost-dcost-and-amount-to-be-recovered-for-each-programmer-for-those-whose-dcost-has-not-yet-been-recovered)
 45.  [Display highest lowest and average salaries for those earn more than 2000](#display-highest-lowest-and-average-salaries-for-those-earn-more-than-2000)
-46.  [Display the details of those who will be completing 2 yrs or service this yea](#display-the-details-of-those-who-will-be-completing-2-yrs-or-service-this-yea)
+46.  [Display the details of those who will be completing 2 yrs or service this year](#display-the-details-of-those-who-will-be-completing-2-yrs-or-service-this-year)
 47.  [Calculate the amount to be recovered for those packages whose development cost has not yet been recovered](#calculate-the-amount-to-be-recovered-for-those-packages-whose-development-cost-has-not-yet-been-recovered)
 48.  [List the packages which have not been sold so far](#list-the-packages-which-have-not-been-sold-so-far)
 49.  [Find out the cost of the software developed by mary](#find-out-the-cost-of-the-software-developed-by-mary)
 50.  [Display the inistitute names from the studies table with out duplicates](#display-the-inistitute-names-from-the-studies-table-with-out-duplicates)
 51.  [How many different courses are mentioned in the studies table](#how-many-different-courses-are-mentioned-in-the-studies-table)
-52.  [Display the names of the programmers whose names contain 2 occurance of the better “A”](#display-the-names-of-the-programmers-whose-names-contain-2-occurance-of-the-better-“a”)
+52.  [Display the names of the programmers whose names contain 2 occurance of the better A](#display-the-names-of-the-programmers-whose-names-contain-2-occurance-of-the-better-a)
 53.  [Display the names of programmers whose names contain upto 5 characters](#display-the-names-of-programmers-whose-names-contain-upto-5-characters)
 54.  [How many female programmers knowning cobol have more then 2 years experience](#how-many-female-programmers-knowning-cobol-have-more-then-2-years-experience)
 55.  [What is the length of the shortest name in the programmer table](#what-is-the-length-of-the-shortest-name-in-the-programmer-table)
 56.  [What is the Average development cost of a package developed in COBOL](#what-is-the-average-development-cost-of-a-package-developed-in-cobol)
-57.  [Display the name, sex, dob(DD/MMYY format), doj(DD/MM/YY) for all the programmers, without using conversion function](#display-the-name,-sex,-dob(dd/mmyy-format),-doj(dd/mm/yy)-for-all-the-programmers,-without-using-conversion-function)
+57.  [Display the name sex dob doj for all the programmers without using conversion function](#display-the-name-sex-dob-doj-for-all-the-programmers-without-using-conversion-function)
 58.  [Who are the programmers who were born on the last day of the month](#who-are-the-programmers-who-were-born-on-the-last-day-of-the-month)
-59.  [What is the amount paid in salaries of the male programmers who don’t know cobol](#what-is-the-amount-paid-in-salaries-of-the-male-programmers-who-don’t-know-cobol)
-60.  [Display the title, scost, dcost and difference between scost and dcost in decending order of difference](#display-the-title,-scost,-dcost-and-difference-between-scost-and-dcost-in-decending-order-of-difference)
+59.  [What is the amount paid in salaries of the male programmers who do not know cobol](#what-is-the-amount-paid-in-salaries-of-the-male-programmers-who-do-not-know-cobol)
+60.  [Display the title scost dcost and difference between scost and dcost in decending order of difference](#display-the-title-scost-dcost-and-difference-between-scost-and-dcost-in-decending-order-of-difference)
 61.  [Display the names of the packages whose names contain more than 1 word](#display-the-names-of-the-packages-whose-names-contain-more-than-1-word)
-62.  [Display the name, job, dob, doj of those month of birth and month of joining are the same](#display-the-name,-job,-dob,-doj-of-those-month-of-birth-and-month-of-joining-are-the-same)
+62.  [Display the name job dob doj of those month of birth and month of joining are the same](#display-the-name-job-dob-doj-of-those-month-of-birth-and-month-of-joining-are-the-same)
 63.  [Who is the highest paid C programmer](#who-is-the-highest-paid-c-programmer)
 64.  [Who is the highest paid Cobol programmer](#who-is-the-highest-paid-cobol-programmer)
 65.  [Display the names of the highest paid programmer for each language in prof1](#display-the-names-of-the-highest-paid-programmer-for-each-language-in-prof1)
@@ -1040,7 +1040,7 @@ SELECT COUNT(DISTINCT COURSE) AS "Number of Different Courses"
 FROM STUDIES;
 ```
 
-##  Display the names of the programmers whose names contain 2 occurance of the better “A”
+##  Display the names of the programmers whose names contain 2 occurance of the better A
 
 - [Question 52](./sql_solutions/Beginner/question52.sql):  Display the names of the programmers whose names contain 2 occurance of the better “A”
 
@@ -1147,7 +1147,7 @@ WHERE
     DEV_IN = 'COBOL';
 ```
 
-##  Display the name, sex, dob(DD/MMYY format), doj(DD/MM/YY) for all the programmers, without using conversion function.
+##  Display the name sex dob doj for all the programmers, without using conversion function.
 
 - [Question 57](./sql_solutions/Beginner/question57.sql):  Display the name, sex, dob(DD/MMYY format), doj(DD/MM/YY) for all the programmers, without using conversion function.
 
@@ -1190,7 +1190,7 @@ WHERE
     OR (DAY(DOB) = 28 AND MONTH(DOB) = 2 AND YEAR(DOB) % 4 <> 0);
 ```
 
-##  What is the amount paid in salaries of the male programmers who don’t know cobol.
+##  What is the amount paid in salaries of the male programmers who do not know cobol.
 
 - [Question 59](./sql_solutions/Beginner/question59.sql):  What is the amount paid in salaries of the male programmers who don’t know cobol.
 
@@ -1210,7 +1210,7 @@ WHERE
     AND (PROF1 <> 'COBOL' AND PROF2 <> 'COBOL');
 ```
 
-##  Display the title, scost, dcost and difference between scost and dcost in decending order of difference.
+##  Display the title scost dcost and difference between scost and dcost in decending order of difference.
 
 - [Question 60](./sql_solutions/Beginner/question60.sql):  Display the title, scost, dcost and difference between scost and dcost in decending order of difference. 
 
@@ -1251,7 +1251,7 @@ WHERE
     TITLE LIKE '% %';
 ```
 
-##  Display the name, job, dob, doj of those month of birth and month of joining are the same.
+##  Display the name job dob doj of those month of birth and month of joining are the same.
 
 - [Question 62](./sql_solutions/Beginner/question62.sql):  Display the name, job, dob, doj of those month of birth and month of joining are the same.
 
@@ -1374,8 +1374,7 @@ where sex = 'M' and prof1 = 'PASCAL' or prof2 = 'PASCAL'
 order by exprience desc
 limit 1;
 ```
-
-6.  Which language is known by only one programmer
+## Which language is known by only one programmer
 
 - [Question 6](./sql_solutions/Intermediate/question6.sql):  Which language is known by only one programmer
 
@@ -1405,7 +1404,7 @@ HAVING
     COUNT(*) = 1;
 ```
 
-7.  Who is that above programmer
+##  Who is that above programmer
 
 - [Question 7](./sql_solutions/Intermediate/question7.sql):  Who is that above programmer
 
