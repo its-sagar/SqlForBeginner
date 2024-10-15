@@ -131,6 +131,14 @@ This repository contains solutions to various SQL questions, covering topics fro
 121.  [Which is the costliest package developed by a person which under 3 year experience](#which-is-the-costliest-package-developed-by-a-person-which-under-3-year-experience)
 122.  [What is the average salary for those whose software sales value is more than 50000](#what-is-the-average-salary-for-those-whose-software-sales-value-is-more-than-50000)
 123.  [How many package were developed by the person studied in institute that charge rthe lowest course fee](#how-many-package-were-developed-by-the-person-studied-in-institute-that-charge-rthe-lowest-course-fee)
+124.  [How many package were developed by the person who developed the chepest package where did he she study](#how-many-package-were-developed-by-the-person-who-developed-the-chepest-package-where-did-he-she-study)
+125.  [How many packages were developed by female programmers earning more than the highest paid male programmer](#how-many-packages-were-developed-by-female-programmers-earning-more-than-the-highest-paid-male-programmer)
+126.  [How many packages were developed by the most experienced programmer from BDPS](#how-many-packages-were-developed-by-the-most-experienced-programmer-from-bdps)
+127.  [List the programmers from the software table and the institutes they studied including those who did not develop any package](#list-the-programmers-from-the-software-table-and-the-institutes-they-studied-including-those-who-did-not-develop-any-package)
+128.  [List each prof1 with the number of programmers having the prof1 and the number of packages developed in that prof1](#list-each-prof1-with-the-number-of-programmers-having-the-prof1-and-the-number-of-packages-developed-in-that-prof1)
+129.  [List the programmer name from the programmer table and the number of packages each has developed](#list-the-programmer-name-from-the-programmer-table-and-the-number-of-packages-each-has-developed)
+
+
 
 
 
@@ -2009,9 +2017,15 @@ group by prof1
 order by No_of_Programmer desc
 limit 1;
 ```
+
+
+
+## Advanced
+Advanced SQL questions covering `subqueries`, `window functions`, `CTEs`, and performance optimizations.
+
 ##  Display the details of those who are drawing the same salary
 
-- [Question 39](./sql_solutions/Intermediate/question39.sql):  Display the details of those who are drawing the same salary
+- [Question 1](./sql_solutions/Advanced/question1.sql):  Display the details of those who are drawing the same salary
 
  <div align="right">
     <a href="#readme-top">
@@ -2029,7 +2043,7 @@ order by salary;
 
 ##  Display the details of the software developed by the male programmers earning more than 3000
 
-- [Question 40](./sql_solutions/Intermediate/question40.sql):  Display the details of the software developed by the male programmers earning more than 3000
+- [Question 2](./sql_solutions/Advanced/question2.sql):  Display the details of the software developed by the male programmers earning more than 3000
 
 <div align="right">
     <a href="#readme-top">
@@ -2044,7 +2058,7 @@ where sex = 'M' and salary > 3000;
 
 ##  Display the details of the packages developed in pascal by female programmers
 
-- [Question 41](./sql_solutions/Intermediate/question41.sql):  Display the details of the packages developed in pascal by female programmers
+- [Question3](./sql_solutions/Advanced/question3.sql):  Display the details of the packages developed in pascal by female programmers
 
 <div align="right">
     <a href="#readme-top">
@@ -2059,7 +2073,7 @@ where dev_in = 'PASCAL' and pname in (select pname from programmer where sex = '
 
 ##  Display the details of those programmers who joined before 1990
 
-- [Question 42](./sql_solutions/Intermediate/question42.sql):  Display the details of those programmers who joined before 1990
+- [Question 4](./sql_solutions/Advanced/question4.sql):  Display the details of those programmers who joined before 1990
 
 <div align="right">
     <a href="#readme-top">
@@ -2074,7 +2088,7 @@ where year(doj) < 1990;
 
 ##  Display the details of the software developed in c by female programmers of PRAGATHI
 
-- [Question 43](./sql_solutions/Intermediate/question43.sql):  Display the details of the software developed in c by female programmers of PRAGATHI
+- [Question 5](./sql_solutions/Advanced/question5.sql):  Display the details of the software developed in c by female programmers of PRAGATHI
   
 <div align="right">
     <a href="#readme-top">
@@ -2094,7 +2108,7 @@ where s.splace = 'PRAGATHI' and p.sex = 'F');
 
 ##  Display the number of packages number of copies sold and sales values of each programmer institute wise
 
-- [Question 44](./sql_solutions/Intermediate/question44.sql):  Display the number of packages , number of copies sold and sales values of each programmer, institute wise
+- [Question 6](./sql_solutions/Advanced/question6.sql):  Display the number of packages , number of copies sold and sales values of each programmer, institute wise
 
 <div align="right">
     <a href="#readme-top">
@@ -2115,7 +2129,7 @@ group by institution, name;
 
 ##  Display the details of the software developed in dbase by male programmers who belong to the institute in which most number of programmers studied
 
-- [Question 45](./sql_solutions/Intermediate/question45.sql):  Display the details of the software developed in dbase by male programmers who belong to the institute in which most number of programmers studied
+- [Question 7](./sql_solutions/Advanced/question7.sql):  Display the details of the software developed in dbase by male programmers who belong to the institute in which most number of programmers studied
  
 <div align="right">
     <a href="#readme-top">
@@ -2159,7 +2173,7 @@ where p.sex = 'M' and sw.dev_in = 'DBASE' and s.splace in (select splace from st
 
 ##  Display the detail of software developed by the male programmers born in 1965 and female programmers after 1975
 
-- [Question 46](./sql_solutions/Intermediate/question46.sql):   Display the detail of software developed by the male programmers born in 1965 and female programmers after 1975
+- [Question8](./sql_solutions/Advanced/question8.sql):   Display the detail of software developed by the male programmers born in 1965 and female programmers after 1975
 
 <div align="right">
     <a href="#readme-top">
@@ -2174,7 +2188,7 @@ where (sex = 'M' and year(dob) = 1965) or (sex = 'F' and year(dob) > 1975);
 ```
 ## Display the details of the software that was developed in the languages that is not the programmers first proficiency
 
-- [Question 47](./sql_solutions/Intermediate/question47.sql):   Display the details of the software that was developed in the languages that is not the programmers’s first proficiency
+- [Question 9](./sql_solutions/Advanced/question9.sql):   Display the details of the software that was developed in the languages that is not the programmers’s first proficiency
 
 <div align="right">
     <a href="#readme-top">
@@ -2190,7 +2204,7 @@ where not(p.prof1= sw.dev_in);
 
 ##  Display the details of the software that was developed in the language which is neither the first nor the second proficiency of the programmer
 
-- [Question 48](./sql_solutions/Intermediate/question48.sql):  Display the details of the software that was developed in the language which is neither the first nor the second proficiency of the programmer
+- [Question 10](./sql_solutions/Advanced/question10.sql):  Display the details of the software that was developed in the language which is neither the first nor the second proficiency of the programmer
 
 <div align="right">
     <a href="#readme-top">
@@ -2206,7 +2220,7 @@ where p.prof1 != sw.dev_in and p.prof2 != sw.dev_in;
 
 ##  Display the details of the software developed by the male students of sabhari
 
-- [Question 49](./sql_solutions/Intermediate/question49.sql):  Display the details of the software developed by the male students of sabhari
+- [Question 11](./sql_solutions/Advanced/question11.sql):  Display the details of the software developed by the male students of sabhari
  
 <div align="right">
     <a href="#readme-top">
@@ -2224,7 +2238,7 @@ where p.sex = 'M' and st.splace = 'sabhari';
 
 ##  Display the names of programmers who have not developed by the male students of sabhari
 
-- [Question 50](./sql_solutions/Intermediate/question50.sql):  Display the names of programmers who have not developed by the male students of sabhari
+- [Question 12](./sql_solutions/Advanced/question12.sql):  Display the names of programmers who have not developed by the male students of sabhari
 
 <div align="right">
     <a href="#readme-top">
@@ -2242,7 +2256,7 @@ where not(p.sex = 'M' and st.splace = 'sabhari');
 
 ##  What is the total cost of the software developed by the programmers by apple
 
-- [Question 51](./sql_solutions/Intermediate/question51.sql):  What is the total cost of the software developed by the programmers by apple
+- [Question 13](./sql_solutions/Advanced/question13.sql):  What is the total cost of the software developed by the programmers by apple
 
 <div align="right">
     <a href="#readme-top">
@@ -2260,7 +2274,7 @@ group by pname, splace;
 
 ##  Who are the programmers who joined in the same day
 
-- [Question 52](./sql_solutions/Intermediate/question52.sql):  Who are the programmers who joined in the same day
+- [Question 14](./sql_solutions/Advanced/question14.sql):  Who are the programmers who joined in the same day
 
 <div align="right">
     <a href="#readme-top">
@@ -2277,7 +2291,7 @@ having count(pname) > 1;
 
 ## Who are the programmers who have the same prof2
 
-- [Question 53](./sql_solutions/Intermediate/question53.sql):  Who are the programmers who have the same prof2
+- [Question 15](./sql_solutions/Advanced/question15.sql):  Who are the programmers who have the same prof2
 
 <div align="right">
     <a href="#readme-top">
@@ -2294,7 +2308,7 @@ having count(pname) > 1;
 
 ##  Display the total sales value of software institute wise
 
-- [Question 54](./sql_solutions/Intermediate/question54.sql):  Display the total sales value of software institute wise
+- [Question 16](./sql_solutions/Advanced/question16.sql):  Display the total sales value of software institute wise
 
 <div align="right">
     <a href="#readme-top">
@@ -2310,7 +2324,7 @@ group by st.splace;
 
 ##  In which institution does the person who developed the costliest package study
 
-- [Question 55](./sql_solutions/Intermediate/question55.sql):  In which institution does the person who developed the costliest package study
+- [Question 17](./sql_solutions/Advanced/question17.sql):  In which institution does the person who developed the costliest package study
  
 <div align="right">
     <a href="#readme-top">
@@ -2328,7 +2342,7 @@ limit 1;
 
 ##  Which language listed in prof1 and prof2 has not been used to develop any package
 
-- [Question 56](./sql_solutions/Intermediate/question56.sql):  Which language listed in prof1 and prof2 has not been used to develop any package
+- [Question 18](./sql_solutions/Advanced/question18.sql):  Which language listed in prof1 and prof2 has not been used to develop any package
 
 <div align="right">
     <a href="#readme-top">
@@ -2351,7 +2365,7 @@ where pname is null;
 
 ##  How much does the person who developed the highest selling package earn and what course did he she undergo
 
-- [Question 57](./sql_solutions/Intermediate/question57.sql):  How much does the person who developed the highest selling package earn and what course did he/she undergo
+- [Question 19](./sql_solutions/Advanced/question19.sql):  How much does the person who developed the highest selling package earn and what course did he/she undergo
  
 <div align="right">
     <a href="#readme-top">
@@ -2372,7 +2386,7 @@ WHERE s.sold = (
 
 ##  How many months will it take for each programmer to recover the cost of the course underwent
 
-- [Question 58](./sql_solutions/Intermediate/question58.sql):   How many months will it take for each programmer to recover the cost of the course uderwent
+- [Question 20](./sql_solutions/Advanced/question20.sql):   How many months will it take for each programmer to recover the cost of the course uderwent
 
 <div align="right">
     <a href="#readme-top">
@@ -2384,10 +2398,37 @@ WHERE s.sold = (
 select p.pname, st.course, ceil(st.ccost/p.salary) from programmer as p
 join studies as st using(pname);
 ```
+## Which is the costliest package developed by a person which under 3 year experience
+
+- [Question 21](./sql_solutions/Advanced/question21.sql):   Which is the costliest package developed by a person which under 3 year experience
+
+<div align="right">
+    <a href="#readme-top">
+        <img width="20" src="./circle-up.svg" alt="" />
+    </a>
+</div>
+
+```sql   
+
+SELECT 
+    TITLE AS "Package Title", 
+    PNAME AS "Programmer", 
+    DCOST AS "Development Cost", 
+    DOJ AS "Date of Joining"
+FROM 
+    PROGRAMMER P
+JOIN 
+    SOFTWARE S ON P.PNAME = S.PNAME
+WHERE 
+    TIMESTAMPDIFF(YEAR, P.DOJ, CURDATE()) < 3
+ORDER BY 
+    S.DCOST DESC
+LIMIT 1;
+```
 
 ##  What is the average salary for those whose software sales value is more than 50000
 
-- [Question 59](./sql_solutions/Intermediate/question59.sql):   What is the average salary for those whose software’s sales value is more than 50000
+- [Question 22](./sql_solutions/Advanced/question22.sql):   What is the average salary for those whose software’s sales value is more than 50000
 
 <div align="right">
     <a href="#readme-top">
@@ -2403,7 +2444,7 @@ where (sw.scost*sw.sold) > 50000;
 
 ##  How many package were developed by the person studied in institute that charge rthe lowest course fee
 
-- [Question 60](./sql_solutions/Intermediate/question60.sql):   How many package were developed by the person studied in institute that charge rthe lowest course fee
+- [Question23](./sql_solutions/Advanced/question23.sql):   How many package were developed by the person studied in institute that charge rthe lowest course fee
 
 <div align="right">
     <a href="#readme-top">
@@ -2424,11 +2465,158 @@ WHERE st.splace = (
 ```
 
 
-## Advanced
-Advanced SQL questions covering `subqueries`, `window functions`, `CTEs`, and performance optimizations.
+##  How many package were developed by the person who developed the chepest package where did he she study
 
-- [Question 1](./sql_solutions/advanced/question1.sql): Write a query to find employees whose salary is in the top 10%.
-- [Question 2](./sql_solutions/advanced/question2.sql): Write a query to rank employees by their performance score using window functions.
+- [Question24](./sql_solutions/Advanced/question24.sql):   How many package were developed by the person who developed the chepest package, where did he/she study
+
+<div align="right">
+    <a href="#readme-top">
+        <img width="20" src="./circle-up.svg" alt="" />
+    </a>
+</div>
+
+```sql   
+WITH Cheapest_Package AS (
+    SELECT 
+        PNAME, 
+        MIN(DCOST) AS Min_Cost
+    FROM 
+        SOFTWARE
+    GROUP BY 
+        PNAME
+    ORDER BY 
+        Min_Cost
+    LIMIT 1
+)
+SELECT 
+    S.PNAME, 
+    S.SPLACE, 
+    COUNT(SW.PNAME) AS "Number of Packages"
+FROM 
+    STUDIES S
+JOIN 
+    SOFTWARE SW ON S.PNAME = SW.PNAME
+WHERE 
+    S.PNAME = (SELECT PNAME FROM Cheapest_Package)
+GROUP BY 
+    S.PNAME, S.SPLACE;
+```
+
+##  How many packages were developed by female programmers earning more than the highest paid male programmer
+
+- [Question25](./sql_solutions/Advanced/question25.sql):   How many packages were developed by female programmers earning more than the highest paid male programmer
+
+<div align="right">
+    <a href="#readme-top">
+        <img width="20" src="./circle-up.svg" alt="" />
+    </a>
+</div>
+
+```sql   
+select count(*) as No_of_Package_Developed from software 
+where pname in (select pname
+from programmer
+where sex = 'F' and salary > (select max(salary) from programmer where sex = 'M'));
+```
+
+##  How many packages were developed by the most experienced programmer from BDPS
+
+- [Question26](./sql_solutions/Advanced/question26.sql):  How many packages were developed by the most experienced programmer from BDPS 
+
+<div align="right">
+    <a href="#readme-top">
+        <img width="20" src="./circle-up.svg" alt="" />
+    </a>
+</div>
+
+```sql   
+select count(*) as No_of_Packages from software 
+where pname in (
+select pname from programmer
+join studies
+using(pname)
+where studies.splace = 'BDPS'
+order by programmer.doj
+);
+```
+
+##  List the programmers from the software table and the institutes they studied including those who did not develop any package
+
+- [Question27](./sql_solutions/Advanced/question27.sql):   List the programmers (from the software table) and the institutes they studied,including those who didn’t develop any package
+
+<div align="right">
+    <a href="#readme-top">
+        <img width="20" src="./circle-up.svg" alt="" />
+    </a>
+</div>
+
+```sql   
+SELECT 
+    S.PNAME, 
+    S.SPLACE, 
+    CASE 
+        WHEN SW.PNAME IS NOT NULL THEN 'Yes' 
+        ELSE 'No' 
+    END AS "Developed Software"
+FROM 
+    STUDIES S
+LEFT JOIN 
+    SOFTWARE SW ON S.PNAME = SW.PNAME
+GROUP BY 
+    S.PNAME, S.SPLACE
+ORDER BY 
+    S.PNAME;
+```
+
+##  List each prof1 with the number of programmers having the prof1 and the number of packages developed in that prof1.
+
+- [Question28](./sql_solutions/Advanced/question28.sql):   List each prof1 with the number of programmers having the prof1 and the number of packages developed in that prof1.
+
+<div align="right">
+    <a href="#readme-top">
+        <img width="20" src="./circle-up.svg" alt="" />
+    </a>
+</div>
+
+```sql   
+SELECT 
+    P.PROF1, 
+    COUNT(DISTINCT P.PNAME) AS "Number of Programmers", 
+    COUNT(SW.PNAME) AS "Number of Packages"
+FROM 
+    PROGRAMMER P
+LEFT JOIN 
+    SOFTWARE SW ON P.PNAME = SW.PNAME AND SW.DEV_IN = P.PROF1
+GROUP BY 
+    P.PROF1;
+```
+
+## List the programmer name from the programmer table and the number of packages each has developed.
+
+- [Question29](./sql_solutions/Advanced/question29.sql):   List the programmer name(from the programmer table) and the number of packages each has developed.
+
+<div align="right">
+    <a href="#readme-top">
+        <img width="20" src="./circle-up.svg" alt="" />
+    </a>
+</div>
+
+```sql   
+SELECT 
+    P.PNAME, 
+    COUNT(SW.PNAME) AS "Number of Packages"
+FROM 
+    PROGRAMMER P
+LEFT JOIN 
+    SOFTWARE SW ON P.PNAME = SW.PNAME
+GROUP BY 
+    P.PNAME
+ORDER BY 
+    P.PNAME;
+```
+
+
+
 
 ## Datasets
 
