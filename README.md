@@ -513,7 +513,6 @@ limit 1;
 
 ##  What is the AVERAGE age of female Programmers.
 
-</div>
 - [Question 23](./sql_solutions/Beginner/question23.sql):  What is the AVERAGE age of female Programmers.
 
 <div align="right">
@@ -913,7 +912,7 @@ having sum(dcost) > sum(scost*sold);
 
 ##  Display highest lowest and average salaries for those earn more than 2000
 
-- [Question 45](./sql_solutions/Beginner/question4s5.sql): Display highest,lowest and average salaries for those earn more than 2000
+- [Question 45](./sql_solutions/Beginner/question45.sql): Display highest,lowest and average salaries for those earn more than 2000
 
 <div align="right">
     <a href="#readme-top">
