@@ -53,67 +53,84 @@ This repository contains solutions to various SQL questions, covering topics fro
 43.  [Display the average difference between scost and dcost for each language](#display-the-average-difference-between-scost-and-dcost-for-each-language)
 44.  [Display the total cost dcost and amount to be recovered for each programmer for those whose dcost has not yet been recovered](#display-the-total-cost-dcost-and-amount-to-be-recovered-for-each-programmer-for-those-whose-dcost-has-not-yet-been-recovered)
 45.  [Display highest lowest and average salaries for those earn more than 2000](#display-highest-lowest-and-average-salaries-for-those-earn-more-than-2000)
-46.  [Who is the highest paid C programmer](#who-is-the-highest-paid-c-programmer)
-47.  [Who is the highest paid Cobol programmer](#who-is-the-highest-paid-cobol-programmer)
-48.  [Display the names of the highest paid programmer for each language in prof1](#display-the-names-of-the-highest-paid-programmer-for-each-language-in-prof1)
-49.  [Who is the least experienced programmer](#who-is-the-least-experienced-programmer)
-50.  [Who is the most experienced male programmer knowing pascal](#who-is-the-most-experienced-male-programmer-knowing-pascal)
-51.  [Which language is known by only one programmer](#which-language-is-known-by-only-one-programmer)
-52.  [Who is that above programmer](#who-is-that-above-programmer)
-53.  [Who is the youngest programmer knowing dbase](#who-is-the-youngest-programmer-knowing-dbase)
-54.  [Which female programmer earning more than 3000](#which-female-programmer-earning-more-than-3000)
-55.  [Which institute has the most number of students](#which-institute-has-the-most-number-of-students)
-56.  [Which course has been done by the most of the students](#which-course-has-been-done-by-the-most-of-the-students)
-57.  [Display the name of the institute and course which has below average course fee](#display-the-name-of-the-institute-and-course-which-has-below-average-course-fee)
-58.  [Which is the costliest course](#which-is-the-costliest-course)
-59.  [Which institute conducts the costliest course](#which-institute-conducts-the-costliest-course)
-60.  [Which course has below average number of students](#which-course-has-below-average-number-of-students)
-61.  [Which institute conducts the above course](#which-institute-conducts-the-above-course)
-62.  [Display the name of the courses whose fees are within 1000 positive or negative of the average fee](#display-the-name-of-the-courses-whose-fees-are-within-1000-positive-or-negative-of-the-average-fee)
-63.  [Which package has the highest development cost](#which-package-has-the-highest-development-cost)
-64.  [Which package has the lowest selling cost](#which-package-has-the-lowest-selling-cost)
-65.  [Who developed the package that has sold the least number of copies](#who-developed-the-package-that-has-sold-the-least-number-of-copies)
-66.  [Which language was used to develop the package which has the highest sales amount](#which-language-was-used-to-develop-the-package-which-has-the-highest-sales-amount)
-67.  [How many copies of the package that has the least difference between development and selling cost were sold](#how-many-copies-of-the-package-that-has-the-least-difference-between-development-and-selling-cost-were-sold)
-68.  [Which is the costliest package developed in pascal](#which-is-the-costliest-package-developed-in-pascal)
-69.  [Which language was used to develop the most number of packages](#which-language-was-used-to-develop-the-most-number-of-packages)
-70.  [Which programmer has developed the highest number of packages](#which-programmer-has-developed-the-highest-number-of-packages)
-71.  [Who is the author of the READ ME package](#who-is-the-author-of-the-read-me-package)
-72.  [Display the name of the package which have sold less than the average number of copies](#display-the-name-of-the-package-which-have-sold-less-than-the-average-number-of-copies)
-73.  [Who are the authors of the packages which have recovered more than double the development cost](#who-are-the-authors-of-the-packages-which-have-recovered-more-than-double-the-development-cost)
-74.  [Display the programmer names and the cheapest package developed by them in each languages](#display-the-programmer-names-and-the-cheapest-package-developed-by-them-in-each-languages)
-75.  [Display the language used by each programmer to develop the highest selling and the lowest selling package](#display-the-language-used-by-each-programmer-to-develop-the-highest-selling-and-the-lowest-selling-package)
-76.  [Who is the youngest male programmer born in 1965](#who-is-the-youngest-male-programmer-born-in-1965)
-77.  [Who is the oldest female programmer who joined in 1992](#who-is-the-oldest-female-programmer-who-joined-in-1992)
-78.  [In which year were the most number of programmer join](#in-which-year-were-the-most-number-of-programmer-join)
-79.  [In which month did most number of programmer join](#in-which-month-did-most-number-of-programmer-join)
-80.  [In which language are most of the programmer proficient](#in-which-language-are-most-of-the-programmer-proficient)
-81.  [Who are the male programmers earning below the average salary of female programmers](#who-are-the-male-programmers-earning-below-the-average-salary-of-female-programmers)
-82.  [Who are the female programmers earning more than the highest paid male programmer](#who-are-the-female-programmers-earning-more-than-the-highest-paid-male-programmer)
-83.  [Which language has been seated as prof1 by the most of the programmers](#which-language-has-been-seated-as-prof1-by-the-most-of-the-programmers)
-84.  [Display the details of those who are drawing the same salary](#display-the-details-of-those-who-are-drawing-the-same-salary)
-85.  [Display the details of the software developed by the male programmers earning more than 3000](#display-the-details-of-the-software-developed-by-the-male-programmers-earning-more-than-3000)
-86.  [Display the details of the packages developed in pascal by female programmers](#display-the-details-of-the-packages-developed-in-pascal-by-female-programmers)
-87.  [Display the details of those programmers who joined before 1990](#display-the-details-of-those-programmers-who-joined-before-1990)
-88.  [Display the details of the software developed in c by female programmers of PRAGATHI](#display-the-details-of-the-software-developed-in-c-by-female-programmers-of-pragathi)
-89.  [Display the number of packages number of copies sold and sales values of each programmer institute wise](#display-the-number-of-packages-number-of-copies-sold-and-sales-values-of-each-programmer-institute-wise)
-90.  [Display the details of the software developed in dbase by male programmers who belong to the institute in which most number of programmers studied](#display-the-details-of-the-software-developed-in-dbase-by-male-programmers-who-belong-to-the-institute-in-which-most-number-of-programmers-studied)
-91.  [Display the detail of software developed by the male programmers born in 1965 and female programmers after 1975](#display-the-detail-of-software-developed-by-the-male-programmers-born-in-1965-and-female-programmers-after-1975)
-92.  [Display the details of the software that was developed in the languages that is not the programmers first proficiency](#display-the-details-of-the-software-that-was-developed-in-the-languages-that-is-not-the-programmers-first-proficiency)
-93.  [Display the details of the software that was developed in the language which is neither the first nor the second proficiency of the programmer](#display-the-details-of-the-software-that-was-developed-in-the-language-which-is-neither-the-first-nor-the-second-proficiency-of-the-programmer)
-94.  [Display the details of the software developed by the male students of sabhari](#display-the-details-of-the-software-developed-by-the-male-students-of-sabhari)
-95.  [Display the names of programmers who have not developed by the male students of sabhari](#display-the-names-of-programmers-who-have-not-developed-by-the-male-students-of-sabhari)
-96.  [What is the total cost of the software developed by the programmers by apple](#what-is-the-total-cost-of-the-software-developed-by-the-programmers-by-apple)
-97.  [Who are the programmers who joined in the same day](#who-are-the-programmers-who-joined-in-the-same-day)
-98.  [Who are the programmers who have the same prof2](#who-are-the-programmers-who-have-the-same-prof2)
-99.  [Display the total sales value of software institute wise](#display-the-total-sales-value-of-software-institute-wise)
-100.  [In which institution does the person who developed the costliest package study](#in-which-institution-does-the-person-who-developed-the-costliest-package-study)
-101.  [Which language listed in prof1 and prof2 has not been used to develop any package](#which-language-listed-in-prof1-and-prof2-has-not-been-used-to-develop-any-package)
-102.  [How much does the person who developed the highest selling package earn and what course did he she undergo](#how-much-does-the-person-who-developed-the-highest-selling-package-earn-and-what-course-did-he-she-undergo)
-103.  [How many months will it take for each programmer to recover the cost of the course underwent](#how-many-months-will-it-take-for-each-programmer-to-recover-the-cost-of-the-course-underwent)
-104.  [Which is the costliest package developed by a person which under 3 year experience](#which-is-the-costliest-package-developed-by-a-person-which-under-3-year-experience)
-105.  [What is the average salary for those whose software sales value is more than 50000](#what-is-the-average-salary-for-those-whose-software-sales-value-is-more-than-50000)
-106.  [How many package were developed by the person studied in institute that charge rthe lowest course fee](#how-many-package-were-developed-by-the-person-studied-in-institute-that-charge-rthe-lowest-course-fee)
+46.  [Display the details of those who will be completing 2 yrs or service this yea](#display-the-details-of-those-who-will-be-completing-2-yrs-or-service-this-yea)
+47.  [Calculate the amount to be recovered for those packages whose development cost has not yet been recovered](#calculate-the-amount-to-be-recovered-for-those-packages-whose-development-cost-has-not-yet-been-recovered)
+48.  [List the packages which have not been sold so far](#list-the-packages-which-have-not-been-sold-so-far)
+49.  [Find out the cost of the software developed by mary](#find-out-the-cost-of-the-software-developed-by-mary)
+50.  [Display the inistitute names from the studies table with out duplicates](#display-the-inistitute-names-from-the-studies-table-with-out-duplicates)
+51.  [How many different courses are mentioned in the studies table](#how-many-different-courses-are-mentioned-in-the-studies-table)
+52.  [Display the names of the programmers whose names contain 2 occurance of the better “A”](#display-the-names-of-the-programmers-whose-names-contain-2-occurance-of-the-better-“a”)
+53.  [Display the names of programmers whose names contain upto 5 characters](#display-the-names-of-programmers-whose-names-contain-upto-5-characters)
+54.  [How many female programmers knowning cobol have more then 2 years experience](#how-many-female-programmers-knowning-cobol-have-more-then-2-years-experience)
+55.  [What is the length of the shortest name in the programmer table](#what-is-the-length-of-the-shortest-name-in-the-programmer-table)
+56.  [What is the Average development cost of a package developed in COBOL](#what-is-the-average-development-cost-of-a-package-developed-in-cobol)
+57.  [Display the name, sex, dob(DD/MMYY format), doj(DD/MM/YY) for all the programmers, without using conversion function](#display-the-name,-sex,-dob(dd/mmyy-format),-doj(dd/mm/yy)-for-all-the-programmers,-without-using-conversion-function)
+58.  [Who are the programmers who were born on the last day of the month](#who-are-the-programmers-who-were-born-on-the-last-day-of-the-month)
+59.  [What is the amount paid in salaries of the male programmers who don’t know cobol](#what-is-the-amount-paid-in-salaries-of-the-male-programmers-who-don’t-know-cobol)
+60.  [Display the title, scost, dcost and difference between scost and dcost in decending order of difference](#display-the-title,-scost,-dcost-and-difference-between-scost-and-dcost-in-decending-order-of-difference)
+61.  [Display the names of the packages whose names contain more than 1 word](#display-the-names-of-the-packages-whose-names-contain-more-than-1-word)
+62.  [Display the name, job, dob, doj of those month of birth and month of joining are the same](#display-the-name,-job,-dob,-doj-of-those-month-of-birth-and-month-of-joining-are-the-same)
+63.  [Who is the highest paid C programmer](#who-is-the-highest-paid-c-programmer)
+64.  [Who is the highest paid Cobol programmer](#who-is-the-highest-paid-cobol-programmer)
+65.  [Display the names of the highest paid programmer for each language in prof1](#display-the-names-of-the-highest-paid-programmer-for-each-language-in-prof1)
+66.  [Who is the least experienced programmer](#who-is-the-least-experienced-programmer)
+67.  [Who is the most experienced male programmer knowing pascal](#who-is-the-most-experienced-male-programmer-knowing-pascal)
+68.  [Which language is known by only one programmer](#which-language-is-known-by-only-one-programmer)
+69.  [Who is that above programmer](#who-is-that-above-programmer)
+70.  [Who is the youngest programmer knowing dbase](#who-is-the-youngest-programmer-knowing-dbase)
+71.  [Which female programmer earning more than 3000](#which-female-programmer-earning-more-than-3000)
+72.  [Which institute has the most number of students](#which-institute-has-the-most-number-of-students)
+73.  [Which course has been done by the most of the students](#which-course-has-been-done-by-the-most-of-the-students)
+74.  [Display the name of the institute and course which has below average course fee](#display-the-name-of-the-institute-and-course-which-has-below-average-course-fee)
+75.  [Which is the costliest course](#which-is-the-costliest-course)
+76.  [Which institute conducts the costliest course](#which-institute-conducts-the-costliest-course)
+77.  [Which course has below average number of students](#which-course-has-below-average-number-of-students)
+78.  [Which institute conducts the above course](#which-institute-conducts-the-above-course)
+79.  [Display the name of the courses whose fees are within 1000 positive or negative of the average fee](#display-the-name-of-the-courses-whose-fees-are-within-1000-positive-or-negative-of-the-average-fee)
+80.  [Which package has the highest development cost](#which-package-has-the-highest-development-cost)
+81.  [Which package has the lowest selling cost](#which-package-has-the-lowest-selling-cost)
+82.  [Who developed the package that has sold the least number of copies](#who-developed-the-package-that-has-sold-the-least-number-of-copies)
+83.  [Which language was used to develop the package which has the highest sales amount](#which-language-was-used-to-develop-the-package-which-has-the-highest-sales-amount)
+84.  [How many copies of the package that has the least difference between development and selling cost were sold](#how-many-copies-of-the-package-that-has-the-least-difference-between-development-and-selling-cost-were-sold)
+85.  [Which is the costliest package developed in pascal](#which-is-the-costliest-package-developed-in-pascal)
+86.  [Which language was used to develop the most number of packages](#which-language-was-used-to-develop-the-most-number-of-packages)
+87.  [Which programmer has developed the highest number of packages](#which-programmer-has-developed-the-highest-number-of-packages)
+88.  [Who is the author of the READ ME package](#who-is-the-author-of-the-read-me-package)
+89.  [Display the name of the package which have sold less than the average number of copies](#display-the-name-of-the-package-which-have-sold-less-than-the-average-number-of-copies)
+90.  [Who are the authors of the packages which have recovered more than double the development cost](#who-are-the-authors-of-the-packages-which-have-recovered-more-than-double-the-development-cost)
+91.  [Display the programmer names and the cheapest package developed by them in each languages](#display-the-programmer-names-and-the-cheapest-package-developed-by-them-in-each-languages)
+92.  [Display the language used by each programmer to develop the highest selling and the lowest selling package](#display-the-language-used-by-each-programmer-to-develop-the-highest-selling-and-the-lowest-selling-package)
+93.  [Who is the youngest male programmer born in 1965](#who-is-the-youngest-male-programmer-born-in-1965)
+94.  [Who is the oldest female programmer who joined in 1992](#who-is-the-oldest-female-programmer-who-joined-in-1992)
+95.  [In which year were the most number of programmer join](#in-which-year-were-the-most-number-of-programmer-join)
+96.  [In which month did most number of programmer join](#in-which-month-did-most-number-of-programmer-join)
+97.  [In which language are most of the programmer proficient](#in-which-language-are-most-of-the-programmer-proficient)
+98.  [Who are the male programmers earning below the average salary of female programmers](#who-are-the-male-programmers-earning-below-the-average-salary-of-female-programmers)
+99.  [Who are the female programmers earning more than the highest paid male programmer](#who-are-the-female-programmers-earning-more-than-the-highest-paid-male-programmer)
+100.  [Which language has been seated as prof1 by the most of the programmers](#which-language-has-been-seated-as-prof1-by-the-most-of-the-programmers)
+101.  [Display the details of those who are drawing the same salary](#display-the-details-of-those-who-are-drawing-the-same-salary)
+102.  [Display the details of the software developed by the male programmers earning more than 3000](#display-the-details-of-the-software-developed-by-the-male-programmers-earning-more-than-3000)
+103.  [Display the details of the packages developed in pascal by female programmers](#display-the-details-of-the-packages-developed-in-pascal-by-female-programmers)
+104.  [Display the details of those programmers who joined before 1990](#display-the-details-of-those-programmers-who-joined-before-1990)
+105.  [Display the details of the software developed in c by female programmers of PRAGATHI](#display-the-details-of-the-software-developed-in-c-by-female-programmers-of-pragathi)
+106.  [Display the number of packages number of copies sold and sales values of each programmer institute wise](#display-the-number-of-packages-number-of-copies-sold-and-sales-values-of-each-programmer-institute-wise)
+107.  [Display the details of the software developed in dbase by male programmers who belong to the institute in which most number of programmers studied](#display-the-details-of-the-software-developed-in-dbase-by-male-programmers-who-belong-to-the-institute-in-which-most-number-of-programmers-studied)
+108.  [Display the detail of software developed by the male programmers born in 1965 and female programmers after 1975](#display-the-detail-of-software-developed-by-the-male-programmers-born-in-1965-and-female-programmers-after-1975)
+109.  [Display the details of the software that was developed in the languages that is not the programmers first proficiency](#display-the-details-of-the-software-that-was-developed-in-the-languages-that-is-not-the-programmers-first-proficiency)
+110.  [Display the details of the software that was developed in the language which is neither the first nor the second proficiency of the programmer](#display-the-details-of-the-software-that-was-developed-in-the-language-which-is-neither-the-first-nor-the-second-proficiency-of-the-programmer)
+111.  [Display the details of the software developed by the male students of sabhari](#display-the-details-of-the-software-developed-by-the-male-students-of-sabhari)
+112.  [Display the names of programmers who have not developed by the male students of sabhari](#display-the-names-of-programmers-who-have-not-developed-by-the-male-students-of-sabhari)
+113.  [What is the total cost of the software developed by the programmers by apple](#what-is-the-total-cost-of-the-software-developed-by-the-programmers-by-apple)
+114.  [Who are the programmers who joined in the same day](#who-are-the-programmers-who-joined-in-the-same-day)
+115.  [Who are the programmers who have the same prof2](#who-are-the-programmers-who-have-the-same-prof2)
+116.  [Display the total sales value of software institute wise](#display-the-total-sales-value-of-software-institute-wise)
+117.  [In which institution does the person who developed the costliest package study](#in-which-institution-does-the-person-who-developed-the-costliest-package-study)
+118.  [Which language listed in prof1 and prof2 has not been used to develop any package](#which-language-listed-in-prof1-and-prof2-has-not-been-used-to-develop-any-package)
+119.  [How much does the person who developed the highest selling package earn and what course did he she undergo](#how-much-does-the-person-who-developed-the-highest-selling-package-earn-and-what-course-did-he-she-undergo)
+120.  [How many months will it take for each programmer to recover the cost of the course underwent](#how-many-months-will-it-take-for-each-programmer-to-recover-the-cost-of-the-course-underwent)
+121.  [Which is the costliest package developed by a person which under 3 year experience](#which-is-the-costliest-package-developed-by-a-person-which-under-3-year-experience)
+122.  [What is the average salary for those whose software sales value is more than 50000](#what-is-the-average-salary-for-those-whose-software-sales-value-is-more-than-50000)
+123.  [How many package were developed by the person studied in institute that charge rthe lowest course fee](#how-many-package-were-developed-by-the-person-studied-in-institute-that-charge-rthe-lowest-course-fee)
 
 
 
@@ -904,6 +921,357 @@ from programmer
 where salary > 2000;
 ```
 
+##  Display the details of those who will be completing 2 yrs or service this year.
+
+- [Question 46](./sql_solutions/Beginner/question46.sql):  Display the details of those who will be completing 2 yrs or service this year.
+
+<div align="right">
+    <a href="#readme-top">
+        <img width="20" src="./circle-up.svg" alt="" />
+    </a>
+</div>
+
+```sql
+
+SELECT 
+    PNAME, DOB, DOJ, SEX, PROF1, PROF2, SALARY
+FROM 
+    PROGRAMMER
+WHERE 
+    YEAR(DOJ) = YEAR(CURDATE()) - 2;
+```
+
+##  Calculate the amount to be recovered for those packages whose development cost has not yet been recovered.
+
+- [Question 47](./sql_solutions/Beginner/question47.sql):  Calculate the amount to be recovered for those packages whose development cost has not yet been recovered.
+
+<div align="right">
+    <a href="#readme-top">
+        <img width="20" src="./circle-up.svg" alt="" />
+    </a>
+</div>
+
+```sql
+SELECT 
+    PNAME, 
+    TITLE, 
+    DCOST, 
+    (DCOST - (SCOST * SOLD)) AS "Amount to be Recovered"
+FROM 
+    SOFTWARE
+WHERE 
+    (SCOST * SOLD) < DCOST;
+```
+
+##  List the packages which have not been sold so far
+
+- [Question 48](./sql_solutions/Beginner/question48.sql):  List the packages which have not been sold so far
+
+<div align="right">
+    <a href="#readme-top">
+        <img width="20" src="./circle-up.svg" alt="" />
+    </a>
+</div>
+
+```sql
+SELECT 
+    PNAME, 
+    TITLE, 
+    DCOST, 
+    SCOST, 
+    SOLD
+FROM 
+    SOFTWARE
+WHERE 
+    SOLD = 0;
+```
+
+##  Find out the cost of the software developed by mary.
+
+- [Question 49](./sql_solutions/Beginner/question49.sql): Find out the cost of the software developed by mary.
+
+<div align="right">
+    <a href="#readme-top">
+        <img width="20" src="./circle-up.svg" alt="" />
+    </a>
+</div>
+
+```sql
+SELECT 
+    PNAME, 
+    TITLE, 
+    DCOST
+FROM 
+    SOFTWARE
+WHERE 
+    PNAME = 'MARY';
+
+SELECT DISTINCT SPLACE
+FROM STUDIES;
+```
+
+##  Display the inistitute names from the studies table with out duplicates
+
+- [Question 50](./sql_solutions/Beginner/question50.sql):  Display the inistitute names from the studies table with out duplicates
+
+<div align="right">
+    <a href="#readme-top">
+        <img width="20" src="./circle-up.svg" alt="" />
+    </a>
+</div>
+
+```sql
+SELECT DISTINCT SPLACE
+FROM STUDIES;
+```
+
+##  How many different courses are mentioned in the studies table
+
+- [Question 51](./sql_solutions/Beginner/question51.sql):  How many different courses are mentioned in the studies table
+
+<div align="right">
+    <a href="#readme-top">
+        <img width="20" src="./circle-up.svg" alt="" />
+    </a>
+</div>
+
+```sql
+SELECT COUNT(DISTINCT COURSE) AS "Number of Different Courses"
+FROM STUDIES;
+```
+
+##  Display the names of the programmers whose names contain 2 occurance of the better “A”
+
+- [Question 52](./sql_solutions/Beginner/question52.sql):  Display the names of the programmers whose names contain 2 occurance of the better “A”
+
+<div align="right">
+    <a href="#readme-top">
+        <img width="20" src="./circle-up.svg" alt="" />
+    </a>
+</div>
+
+```sql
+SELECT 
+    PNAME
+FROM 
+    PROGRAMMER
+WHERE 
+    LENGTH(PNAME) - LENGTH(REPLACE(UPPER(PNAME), 'A', '')) = 2;
+```
+
+OR,
+
+```sql
+SELECT
+	PNAME 
+FROM
+	PROGRAMMER
+WHERE 
+	PNAME LIKE '%A%A%';
+```
+
+##  Display the names of programmers whose names contain upto 5 characters
+
+- [Question 53](./sql_solutions/Beginner/question53.sql):  Display the names of programmers whose names contain upto 5 characters
+
+<div align="right">
+    <a href="#readme-top">
+        <img width="20" src="./circle-up.svg" alt="" />
+    </a>
+</div>
+
+```sql
+SELECT 
+    PNAME
+FROM 
+    PROGRAMMER
+WHERE 
+    LENGTH(PNAME) <= 5;
+```
+
+##  How many female programmers knowning cobol have more then 2 years experience.
+
+- [Question 54](./sql_solutions/Beginner/question54.sql):  How many female programmers knowning cobol have more then 2 years experience.
+
+<div align="right">
+    <a href="#readme-top">
+        <img width="20" src="./circle-up.svg" alt="" />
+    </a>
+</div>
+
+```sql
+SELECT 
+    COUNT(*) AS "Number of Female Programmers"
+FROM 
+    PROGRAMMER
+WHERE 
+    SEX = 'F'
+    AND PROF1 = 'COBOL'
+    OR PROF2 = 'COBOL'
+    AND (YEAR(CURDATE()) - YEAR(DOJ)) > 2;
+```
+
+##  What is the length of the shortest name in the programmer table.
+
+- [Question 55](./sql_solutions/Beginner/question55.sql):  What is the length of the shortest name in the programmer table.
+
+<div align="right">
+    <a href="#readme-top">
+        <img width="20" src="./circle-up.svg" alt="" />
+    </a>
+</div>
+
+```sql
+SELECT 
+    MIN(LENGTH(PNAME)) AS "Length of Shortest Name"
+FROM 
+    PROGRAMMER;
+```
+
+##  What is the Average development cost of a package developed in COBOL
+
+- [Question 56](./sql_solutions/Beginner/question56.sql):  What is the Average development cost of a package developed in COBOL
+
+<div align="right">
+    <a href="#readme-top">
+        <img width="20" src="./circle-up.svg" alt="" />
+    </a>
+</div>
+
+```sql
+SELECT 
+    AVG(DCOST) AS "Average Development Cost"
+FROM 
+    SOFTWARE
+WHERE 
+    DEV_IN = 'COBOL';
+```
+
+##  Display the name, sex, dob(DD/MMYY format), doj(DD/MM/YY) for all the programmers, without using conversion function.
+
+- [Question 57](./sql_solutions/Beginner/question57.sql):  Display the name, sex, dob(DD/MMYY format), doj(DD/MM/YY) for all the programmers, without using conversion function.
+
+<div align="right">
+    <a href="#readme-top">
+        <img width="20" src="./circle-up.svg" alt="" />
+    </a>
+</div>
+
+```sql
+SELECT 
+    PNAME AS "Name", 
+    SEX AS "Sex", 
+    DATE_FORMAT(DOB, '%d/%m%y') AS "DOB", 
+    DATE_FORMAT(DOJ, '%d/%m%y') AS "DOJ"
+FROM 
+    PROGRAMMER;
+```
+
+##  Who are the programmers who were born on the last day of the month.
+
+- [Question 58](./sql_solutions/Beginner/question58.sql):  Who are the programmers who were born on the last day of the month.
+
+<div align="right">
+    <a href="#readme-top">
+        <img width="20" src="./circle-up.svg" alt="" />
+    </a>
+</div>
+
+```sql
+SELECT 
+    PNAME AS "Name", 
+    DOB AS "DOB" 
+FROM 
+    PROGRAMMER 
+WHERE 
+    DAY(DOB) = 31 
+    OR (DAY(DOB) = 30 AND MONTH(DOB) IN (4, 6, 9, 11)) 
+    OR (DAY(DOB) = 29 AND MONTH(DOB) = 2) 
+    OR (DAY(DOB) = 28 AND MONTH(DOB) = 2 AND YEAR(DOB) % 4 <> 0);
+```
+
+##  What is the amount paid in salaries of the male programmers who don’t know cobol.
+
+- [Question 59](./sql_solutions/Beginner/question59.sql):  What is the amount paid in salaries of the male programmers who don’t know cobol.
+
+<div align="right">
+    <a href="#readme-top">
+        <img width="20" src="./circle-up.svg" alt="" />
+    </a>
+</div>
+
+```sql
+SELECT 
+    SUM(SALARY) AS "Total_Salary"
+FROM 
+    PROGRAMMER
+WHERE 
+    SEX = 'M' 
+    AND (PROF1 <> 'COBOL' AND PROF2 <> 'COBOL');
+```
+
+##  Display the title, scost, dcost and difference between scost and dcost in decending order of difference.
+
+- [Question 60](./sql_solutions/Beginner/question60.sql):  Display the title, scost, dcost and difference between scost and dcost in decending order of difference. 
+
+<div align="right">
+    <a href="#readme-top">
+        <img width="20" src="./circle-up.svg" alt="" />
+    </a>
+</div>
+
+```sql
+SELECT 
+    TITLE, 
+    SCOST, 
+    DCOST, 
+    (SCOST - DCOST) AS "Difference"
+FROM 
+    SOFTWARE
+ORDER BY 
+    Difference DESC;
+```
+
+##  Display the names of the packages whose names contain more than 1 word.
+
+- [Question 61](./sql_solutions/Beginner/question61.sql):  Display the names of the packages whose names contain more than 1 word.
+
+<div align="right">
+    <a href="#readme-top">
+        <img width="20" src="./circle-up.svg" alt="" />
+    </a>
+</div>
+
+```sql
+SELECT 
+    TITLE
+FROM 
+    SOFTWARE
+WHERE 
+    TITLE LIKE '% %';
+```
+
+##  Display the name, job, dob, doj of those month of birth and month of joining are the same.
+
+- [Question 62](./sql_solutions/Beginner/question62.sql):  Display the name, job, dob, doj of those month of birth and month of joining are the same.
+
+<div align="right">
+    <a href="#readme-top">
+        <img width="20" src="./circle-up.svg" alt="" />
+    </a>
+</div>
+
+```sql
+SELECT 
+    PNAME AS "Name", 
+    PROF1 AS "Job", 
+    DOB AS "DOB", 
+    DOJ AS "DOJ"
+FROM 
+    PROGRAMMER
+WHERE 
+    MONTH(DOB) = MONTH(DOJ);
+```
 
 
 
