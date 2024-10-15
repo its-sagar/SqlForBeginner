@@ -1,6 +1,7 @@
---  Who is the highest paid C programmer
+-- Display the details of those who are drawing the same salary
 
 select * from programmer
-where prof1 = 'c' or prof2 = 'c'
-order by salary desc
-limit 1;
+where salary in ( select salary from programmer
+group by salary
+having count(*) > 1)
+order by salary;

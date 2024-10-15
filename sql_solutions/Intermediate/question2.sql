@@ -1,4 +1,6 @@
--- Display the sales values of the packages developed by the each programmer
+-- Who is the highest paid Cobol programmer
 
-select pname , sum(scost*sold) as Total_Cost from software
-group by pname;
+select * from programmer
+where prof1 = 'COBOL' or prof2 = 'COBOL'
+order by salary desc
+limit 1;

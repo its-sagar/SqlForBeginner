@@ -1,4 +1,6 @@
--- Display the cost of the package developed by each programmer.
+--  Who is the highest paid C programmer
 
-select pname , sum(dcost) as Total_Cost from software
-group by pname;
+select * from programmer
+where prof1 = 'c' or prof2 = 'c'
+order by salary desc
+limit 1;
